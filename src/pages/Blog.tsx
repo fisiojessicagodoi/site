@@ -1,0 +1,525 @@
+import React, { useState } from 'react';
+import { SearchIcon, Filter } from 'lucide-react';
+import SectionTitle from '../components/ui/SectionTitle';
+import BlogCard from '../components/ui/BlogCard';
+
+const Blog: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('');
+  
+  const articles = [
+    {
+      id: 'treinamento-assoalho-pelvico',
+      title: 'Exercícios Essenciais para o Assoalho Pélvico para Melhor Saúde',
+      excerpt: 'Descubra os exercícios mais eficazes para fortalecer os músculos do assoalho pélvico e melhorar a saúde pélvica geral.',
+      date: '10 de fevereiro de 2025',
+      readTime: '5 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-minimal-1.jpg',
+      category: 'Exercícios'
+    },
+    {
+      id: 'prolapso-pelvico-artigo-2',
+      title: 'Prolapso Pélvico: Como Identificar, Prevenir e Tratar',
+      excerpt: 'Entenda os sinais do prolapso pélvico, fatores de risco, dicas de prevenção e as melhores opções de tratamento fisioterapêutico.',
+      date: '17 de fevereiro de 2025',
+      readTime: '7 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-minimal-2.jpg',
+      category: 'Prolapso Pélvico'
+    },
+    {
+      id: 'dor-pelvica-cronica',
+      title: 'Entendendo e Gerenciando Dor Pélvica Crônica',
+      excerpt: 'Explore as causas da dor pélvica crônica e abordagens baseadas em evidências para encontrar alívio e melhorar a qualidade de vida.',
+      date: '24 de fevereiro de 2025',
+      readTime: '6 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-minimal-3.jpg',
+      category: 'Gerenciamento de Dor'
+    },
+    {
+      id: 'incontinencia-mitos',
+      title: 'Desmistificando Mitos Sobre Incontinência',
+      excerpt: 'Separando fatos de mitos sobre incontinência urinária para ajudar você a entender e lidar melhor com essa condição comum.',
+      date: '3 de março de 2025',
+      readTime: '4 min de leitura',
+      author: 'Jéssica Godoi',
+      image: 'https://images.pexels.com/photos/6551803/pexels-photo-6551803.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      category: 'Educação'
+    },
+    {
+      id: 'endometriosis-management',
+      title: 'Fisioterapia no Manejo da Endometriose',
+      excerpt: 'Como a fisioterapia pélvica especializada pode complementar o tratamento médico da endometriose e reduzir a dor.',
+      date: '17 de março de 2025',
+      readTime: '8 min de leitura',
+      author: 'Jéssica Godoi',
+      image: 'https://images.pexels.com/photos/7176319/pexels-photo-7176319.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      category: 'Saúde Feminina'
+    },
+    {
+      id: 'sitting-pelvic-health',
+      title: 'Como a Postura ao Sentar Afeta Sua Saúde Pélvica',
+      excerpt: 'A surpreendente relação entre hábitos ao sentar e disfunção do assoalho pélvico, além de dicas para uma postura melhor.',
+      date: '24 de março de 2025',
+      readTime: '5 min de leitura',
+      author: 'Jéssica Godoi',
+      image: 'https://images.pexels.com/photos/8941790/pexels-photo-8941790.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      category: 'Estilo de Vida'
+    },
+    {
+      id: 'exercise-prolapse',
+      title: 'Exercícios Seguros para Prolapso de Órgãos Pélvicos',
+      excerpt: 'Como se manter ativa e preservar o assoalho pélvico mesmo com diagnóstico de prolapso.',
+      date: '31 de março de 2025',
+      readTime: '7 min de leitura',
+      author: 'Jéssica Godoi',
+      image: 'https://images.pexels.com/photos/8436744/pexels-photo-8436744.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      category: 'Exercícios'
+    },
+    {
+      id: 'breathing-pelvic-floor',
+      title: 'A Relação Entre Respiração e Função do Assoalho Pélvico',
+      excerpt: 'Entenda como o padrão respiratório influencia o assoalho pélvico e técnicas simples para melhor coordenação.',
+      date: '7 de abril de 2025',
+      readTime: '6 min de leitura',
+      author: 'Jéssica Godoi',
+      image: 'https://images.pexels.com/photos/3758056/pexels-photo-3758056.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      category: 'Educação'
+    },
+    {
+      id: 'prolapso-pelvico-artigo',
+      title: 'Entenda o Prolapso Pélvico: Sintomas, Prevenção e Tratamento',
+      excerpt: 'Saiba como identificar sinais de prolapso pélvico, estratégias de prevenção e as melhores opções de tratamento fisioterapêutico.',
+      date: '14 de abril de 2025',
+      readTime: '7 min de leitura',
+      author: 'Jéssica Godoi',
+      image: 'https://images.pexels.com/photos/5853733/pexels-photo-5853733.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      category: 'Prolapso Pélvico'
+    },
+    {
+      id: 'sindrome-rokitansky',
+      title: 'Síndrome de Rokitansky: Entenda a Condição e as Possibilidades de Tratamento',
+      excerpt: 'Descubra o que é a Síndrome de Rokitansky, seus sintomas, diagnóstico e como a fisioterapia pélvica pode ajudar no bem-estar e qualidade de vida.',
+      date: '21 de abril de 2025',
+      readTime: '6 min de leitura',
+      author: 'Jéssica Godoi',
+      image: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      category: 'Saúde Feminina'
+    },
+    {
+      id: 'homenagem-dia-das-maes',
+      title: 'O Cuidado que Aprendi com as Mulheres da Minha Vida: Uma Homenagem no Dia das Mães',
+      date: '12 de maio de 2024',
+      readTime: '4 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '', // Sem foto
+      excerpt: 'Uma reflexão sobre o cuidado, a inspiração familiar e a importância de valorizar quem cuida de todos, especialmente no Dia das Mães.',
+      category: 'Reflexão',
+      content: `
+        Desde pequena, cresci cercada por mulheres fortes, generosas e acolhedoras. Lembro da minha avó ajudando vizinhas, amigas e familiares, sempre pronta a ouvir, aconselhar e oferecer um gesto de cuidado. Minha mãe seguiu o mesmo caminho, e, naturalmente, esse exemplo se tornou parte de quem eu sou.
+
+        Foi essa inspiração familiar que me levou a escolher a fisioterapia pélvica como profissão e missão de vida. Durante a graduação na Universidade Federal de São Carlos, mergulhei nos estudos e logo iniciei minha trajetória científica, participando de três iniciações científicas e publicando meu primeiro artigo ainda como estudante. Desde 2019, dedico-me à pesquisa e ao atendimento em saúde da mulher, com três publicações científicas e uma especialização na área.
+
+        O que mais me encanta na minha profissão é poder retribuir, de alguma forma, o cuidado que recebi e aprendi em casa. Atendo mulheres que, muitas vezes, passaram a vida inteira cuidando dos outros — dos filhos, da família, do trabalho — e que, só agora, encontram um espaço para olhar para si mesmas. Meu compromisso é oferecer um atendimento individualizado, baseado em ciência, acolhimento e respeito à história de cada uma.
+
+        Neste Dia das Mães, minha homenagem vai para todas as mulheres que cuidam, inspiram e transformam vidas — dentro e fora de casa. Que possamos, juntas, valorizar o autocuidado e reconhecer a força que existe em cada história.
+
+        Feliz Dia das Mães!
+      `,
+    },
+    {
+      id: 'incontinencia-urinaria-urgencia',
+      title: 'Incontinência Urinária de Urgência: Sintomas, Causas e Tratamento em Campinas',
+      excerpt: 'Descubra o que é incontinência urinária de urgência, principais sintomas, causas e como a fisioterapia pélvica pode ajudar no controle desse problema. Atendimento presencial e domiciliar em Campinas.',
+      date: '01 de julho de 2025',
+      readTime: '6 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-incontinencia-urgencia.jpg',
+      category: 'Sintomas Urinários'
+    },
+    {
+      id: 'incontinencia-urinaria-esforco',
+      title: 'Incontinência Urinária de Esforço: Como Identificar e Tratar',
+      excerpt: 'Saiba como reconhecer a incontinência urinária de esforço, suas causas e as melhores opções de tratamento fisioterapêutico em Campinas.',
+      date: '02 de julho de 2025',
+      readTime: '5 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-incontinencia-esforco.jpg',
+      category: 'Sintomas Urinários'
+    },
+    {
+      id: 'incontinencia-urinaria-mista',
+      title: 'Incontinência Urinária Mista: Diferenças, Sintomas e Tratamento',
+      excerpt: 'Entenda o que é incontinência urinária mista, como diferenciar dos outros tipos e como a fisioterapia pélvica pode ajudar. Atendimento em Campinas e domicílio.',
+      date: '03 de julho de 2025',
+      readTime: '6 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-incontinencia-mista.jpg',
+      category: 'Sintomas Urinários'
+    },
+    {
+      id: 'diferenca-incontinencias',
+      title: 'Diferença entre Incontinência de Urgência, Esforço e Mista',
+      excerpt: 'Veja como identificar cada tipo de incontinência urinária e qual o tratamento mais indicado para cada caso. Fisioterapia pélvica em Campinas.',
+      date: '04 de julho de 2025',
+      readTime: '5 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-diferenca-incontinencias.jpg',
+      category: 'Sintomas Urinários'
+    },
+    {
+      id: 'urgencia-miccional',
+      title: 'Urgência Miccional: O que é, Sintomas e Tratamento',
+      excerpt: 'Saiba o que é urgência miccional, como ela afeta a qualidade de vida e como a fisioterapia pode ajudar no controle dos sintomas.',
+      date: '05 de julho de 2025',
+      readTime: '4 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-urgencia-miccional.jpg',
+      category: 'Sintomas Urinários'
+    },
+    {
+      id: 'hesitacao-miccional',
+      title: 'Hesitação Miccional: Entenda as Causas e Soluções',
+      excerpt: 'Descubra o que é hesitação miccional, suas causas e como a fisioterapia pélvica pode ajudar no tratamento. Atendimento em Campinas.',
+      date: '06 de julho de 2025',
+      readTime: '4 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-hesitacao-miccional.jpg',
+      category: 'Sintomas Urinários'
+    },
+    {
+      id: 'esvaziamento-incompleto',
+      title: 'Sensação de Esvaziamento Vesical Incompleto: O que Fazer?',
+      excerpt: 'Entenda por que pode ocorrer a sensação de esvaziamento vesical incompleto e como a fisioterapia pode ajudar a melhorar esse sintoma.',
+      date: '07 de julho de 2025',
+      readTime: '5 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-esvaziamento-incompleto.jpg',
+      category: 'Sintomas Urinários'
+    },
+    {
+      id: 'gotejamento-pos-miccional',
+      title: 'Gotejamento Pós-Miccional: Causas e Tratamento',
+      excerpt: 'Saiba o que é gotejamento pós-miccional, por que acontece e como a fisioterapia pélvica pode ajudar no controle desse sintoma.',
+      date: '08 de julho de 2025',
+      readTime: '4 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-gotejamento.jpg',
+      category: 'Sintomas Urinários'
+    },
+    {
+      id: 'diario-miccional',
+      title: 'Diário Miccional: O que é e Por que é Importante no Tratamento',
+      excerpt: 'Descubra como o diário miccional pode ajudar no diagnóstico e acompanhamento do tratamento de sintomas urinários. Saiba como preencher corretamente.',
+      date: '09 de julho de 2025',
+      readTime: '5 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-diario-miccional.jpg',
+      category: 'Sintomas Urinários'
+    },
+    {
+      id: 'tempo-sem-urinar',
+      title: 'Ficar Muito Tempo sem Urinar: Quais os Riscos para a Bexiga?',
+      excerpt: 'Entenda por que segurar o xixi por muito tempo pode ser prejudicial para a bexiga e o assoalho pélvico. Dicas de saúde urinária.',
+      date: '10 de julho de 2025',
+      readTime: '4 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-tempo-sem-urinar.jpg',
+      category: 'Sintomas Urinários'
+    },
+    {
+      id: 'habitos-ruins-bexiga',
+      title: 'Hábitos Ruins para sua Bexiga e Assoalho Pélvico',
+      excerpt: 'Conheça os hábitos que prejudicam a saúde da bexiga e do assoalho pélvico e saiba como evitá-los. Atendimento em Campinas.',
+      date: '11 de julho de 2025',
+      readTime: '5 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-habitos-ruins.jpg',
+      category: 'Sintomas Urinários'
+    },
+    {
+      id: 'constipacao-intestinal',
+      title: 'Constipação Intestinal: Sintomas, Causas e Tratamento',
+      excerpt: 'Saiba como identificar a constipação intestinal, principais causas e como a fisioterapia pode ajudar no tratamento. Atendimento domiciliar e em Campinas.',
+      date: '12 de julho de 2025',
+      readTime: '6 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-constipacao.jpg',
+      category: 'Sintomas Intestinais'
+    },
+    {
+      id: 'criterios-roma',
+      title: 'Critérios de Roma: O que São e Como Avaliar a Constipação',
+      excerpt: 'Entenda os critérios de Roma para diagnóstico de constipação intestinal e sua importância no tratamento fisioterapêutico.',
+      date: '13 de julho de 2025',
+      readTime: '5 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-criterios-roma.jpg',
+      category: 'Sintomas Intestinais'
+    },
+    {
+      id: 'escala-bristol',
+      title: 'Escala de Bristol: Como Avaliar as Fezes e sua Relação com a Saúde Intestinal',
+      excerpt: 'Saiba o que é a Escala de Bristol, como ela auxilia no diagnóstico de constipação e outros distúrbios intestinais.',
+      date: '14 de julho de 2025',
+      readTime: '4 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-bristol.jpg',
+      category: 'Sintomas Intestinais'
+    },
+    {
+      id: 'dispareunia-vaginismo',
+      title: 'Dispareunia e Vaginismo: Diferenças, Sintomas e Tratamento',
+      excerpt: 'Entenda o que é dispareunia, o que é vaginismo, as diferenças entre eles e como a fisioterapia pélvica pode ajudar.',
+      date: '15 de julho de 2025',
+      readTime: '6 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-dispareunia-vaginismo.jpg',
+      category: 'Dor Genito Pélvica'
+    },
+    {
+      id: 'vulvodinia',
+      title: 'Vulvodínia: O que é, Sintomas e Opções de Tratamento',
+      excerpt: 'Saiba o que é vulvodínia, principais sintomas, causas e como a fisioterapia pode ajudar no alívio da dor.',
+      date: '16 de julho de 2025',
+      readTime: '5 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-vulvodinia.jpg',
+      category: 'Dor Genito Pélvica'
+    },
+    {
+      id: 'clitoris-prazer-feminino',
+      title: 'O que é o Clitóris e sua Importância no Prazer Feminino',
+      excerpt: 'Descubra a anatomia do clitóris, sua função no prazer feminino e como a fisioterapia pode ajudar em casos de dor ou alteração de sensibilidade.',
+      date: '17 de julho de 2025',
+      readTime: '5 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-clitoris.jpg',
+      category: 'Dor Genito Pélvica'
+    },
+    {
+      id: 'aderencia-clitoris',
+      title: 'Aderência no Clitóris: O que é e Como Tratar',
+      excerpt: 'Saiba o que é aderência no clitóris, como identificar alterações de sensibilidade e as opções de tratamento fisioterapêutico.',
+      date: '18 de julho de 2025',
+      readTime: '4 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-aderencia-clitoris.jpg',
+      category: 'Dor Genito Pélvica'
+    },
+    {
+      id: 'desejo-sexual-baixo',
+      title: 'Diminuição do Desejo Sexual: Causas e Tratamento',
+      excerpt: 'Entenda os fatores que podem levar à diminuição do desejo sexual e como a fisioterapia pélvica pode ajudar a recuperar o prazer.',
+      date: '19 de julho de 2025',
+      readTime: '5 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-desejo-baixo.jpg',
+      category: 'Dor Genito Pélvica'
+    },
+    {
+      id: 'dificuldade-orgasmo',
+      title: 'Dificuldade de Chegar ao Orgasmo: O que Pode Influenciar?',
+      excerpt: 'Saiba quais fatores podem dificultar o orgasmo feminino e como a fisioterapia pode ajudar a melhorar a função sexual.',
+      date: '20 de julho de 2025',
+      readTime: '5 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-dificuldade-orgasmo.jpg',
+      category: 'Dor Genito Pélvica'
+    },
+    {
+      id: 'dispareunia-profundidade-superficie',
+      title: 'Dispareunia de Profundidade x Superfície: Diferenças e Tratamento',
+      excerpt: 'Entenda a diferença entre dispareunia de profundidade e de superfície, sintomas e abordagens fisioterapêuticas.',
+      date: '21 de julho de 2025',
+      readTime: '5 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-dispareunia-tipos.jpg',
+      category: 'Dor Genito Pélvica'
+    },
+    {
+      id: 'fatores-disfuncao-sexual',
+      title: 'Fatores que Podem Influenciar nas Disfunções Sexuais Femininas',
+      excerpt: 'Conheça os principais fatores físicos, emocionais e comportamentais que podem impactar a função sexual da mulher.',
+      date: '22 de julho de 2025',
+      readTime: '6 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-fatores-disfuncao.jpg',
+      category: 'Dor Genito Pélvica'
+    },
+    {
+      id: 'prolapso-pelvico',
+      title: 'Prolapso Pélvico: O que é, Sintomas e Como a Fisioterapia Pode Ajudar',
+      excerpt: 'Saiba o que é prolapso pélvico, principais sintomas, fatores de risco e como a fisioterapia pélvica pode ajudar no tratamento. Atendimento em Campinas.',
+      date: '23 de julho de 2025',
+      readTime: '6 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-prolapso.jpg',
+      category: 'Prolapso Pélvico'
+    },
+    {
+      id: 'fisioterapia-pelvica-campinas',
+      title: 'Fisioterapia Pélvica em Campinas: Quando Procurar e Como Funciona',
+      excerpt: 'Entenda quando procurar um fisioterapeuta pélvico, como funciona o atendimento presencial e domiciliar em Campinas e os benefícios para a saúde da mulher.',
+      date: '24 de julho de 2025',
+      readTime: '5 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-fisioterapia-campinas.jpg',
+      category: 'Fisioterapia Pélvica'
+    },
+    {
+      id: 'atendimento-domiciliar-campinas',
+      title: 'Atendimento Domiciliar em Fisioterapia Pélvica em Campinas',
+      excerpt: 'Saiba como funciona o atendimento domiciliar em fisioterapia pélvica, para quem é indicado e os diferenciais do serviço em Campinas.',
+      date: '25 de julho de 2025',
+      readTime: '5 min de leitura',
+      author: 'Jéssica Godoi',
+      image: '/images/blog-atendimento-domiciliar.jpg',
+      category: 'Fisioterapia Pélvica'
+    }
+  ];
+  
+  // Ordenar do mais recente para o mais antigo
+  articles.sort((a, b) => {
+    const parseDate = (str: string): number => {
+      // Exemplo: '14 de abril de 2025'
+      const [dia, mes, ano] = str.split(' de ');
+      const meses: { [key: string]: number } = {
+        'janeiro': 0, 'fevereiro': 1, 'março': 2, 'abril': 3, 'maio': 4, 'junho': 5,
+        'julho': 6, 'agosto': 7, 'setembro': 8, 'outubro': 9, 'novembro': 10, 'dezembro': 11
+      };
+      return new Date(Number(ano), meses[mes as string], Number(dia)).getTime();
+    };
+    return parseDate(b.date) - parseDate(a.date);
+  });
+  
+  const categories = [...new Set(articles.map(article => article.category))];
+  
+  const filteredArticles = articles.filter(article => {
+    const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                         article.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === '' || article.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+
+  return (
+    <div>
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-16 bg-sand-to-coral text-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6">Blog & Recursos</h1>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              Artigos educativos, novidades e dicas práticas para sua saúde pélvica
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Search and Filter */}
+      <section className="py-10 bg-gray-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="relative w-full md:w-96">
+              <input
+                type="text"
+                placeholder="Buscar artigos..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-terracota-600 focus:border-transparent"
+              />
+              <div className="absolute inset-y-0 right-0 flex items-center pr-3">
+                <SearchIcon className="h-5 w-5 text-gray-400" />
+              </div>
+            </div>
+            
+            <div className="w-full md:w-auto flex">
+              <div className="relative w-full md:w-48">
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-full appearance-none focus:outline-none focus:ring-2 focus:ring-terracota-600 focus:border-transparent"
+                >
+                  <option value="">Todas as categorias</option>
+                  {categories.map((category) => (
+                    <option key={category} value={category}>
+                      {category}
+                    </option>
+                  ))}
+                </select>
+                <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                  <Filter className="h-5 w-5 text-gray-400" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Articles Grid */}
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4 md:px-6">
+          {filteredArticles.length > 0 ? (
+            <>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredArticles.map((article) => (
+                  <BlogCard key={article.id} {...article} />
+                ))}
+              </div>
+            </>
+          ) : (
+            <div className="text-center py-12">
+              <p className="text-gray-500">Nenhum artigo encontrado para sua busca.</p>
+              <button 
+                onClick={() => {
+                  setSearchTerm('');
+                  setSelectedCategory('');
+                }}
+                className="mt-4 text-gray-600 hover:text-terracota-500 font-medium"
+              >
+                Limpar filtros
+              </button>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Newsletter Section */}
+      <section className="py-16 md:py-20 bg-gray-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="bg-terracota-50 p-8 rounded-lg shadow-sm">
+              <h3 className="font-serif text-2xl font-bold text-gray-800 mb-4">Receba Conteúdo Exclusivo</h3>
+              <p className="text-gray-600 mb-6">
+                Semanalmente, envio dicas práticas de autocuidado, informações sobre saúde feminina e novidades sobre tratamentos. 
+                Tudo para ajudar você a cuidar melhor da sua saúde pélvica, com conteúdo selecionado especialmente para mulheres.
+              </p>
+              <form className="max-w-md mx-auto">
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <input
+                    type="email"
+                    placeholder="Digite seu e-mail"
+                    className="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-terracota-500 text-gray-700"
+                  />
+                  <button
+                    type="submit"
+                    className="px-6 py-3 bg-terracota-600 text-white rounded-lg hover:bg-terracota-700 transition-colors font-medium"
+                  >
+                    Receber Conteúdo
+                  </button>
+                </div>
+                <p className="text-sm text-gray-500 mt-3">
+                  Seu e-mail está seguro. Você receberá apenas conteúdo relevante e pode cancelar quando quiser.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Blog;
