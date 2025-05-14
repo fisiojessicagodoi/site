@@ -7,6 +7,16 @@ const Blog: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('');
   
+  // Categorias principais organizadas
+  const mainCategories = [
+    'Incontinência Urinária',
+    'Dor na Relação',
+    'Pós-Parto',
+    'Saúde Pélvica',
+    'Exercícios',
+    'Dicas de Saúde'
+  ];
+
   const articles = [
     {
       id: 'treinamento-assoalho-pelvico',
@@ -395,14 +405,35 @@ const Blog: React.FC = () => {
     return parseDate(b.date) - parseDate(a.date);
   });
   
-  const categories = [...new Set(articles.map(article => article.category))];
-  
-  const filteredArticles = articles.filter(article => {
-    const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                         article.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === '' || article.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+  // Função para encontrar artigos relacionados
+  const findRelatedArticles = (currentArticle: any, allArticles: any[]) => {
+    return allArticles
+      .filter(article => 
+        article.id !== currentArticle.id && 
+        (article.category === currentArticle.category || 
+         article.title.toLowerCase().includes(currentArticle.title.toLowerCase().split(' ')[0]))
+      )
+      .slice(0, 3);
+  };
+
+  // Função de busca melhorada
+  const searchArticles = (articles: any[], term: string) => {
+    const searchTerms = term.toLowerCase().split(' ');
+    return articles.filter(article => {
+      const titleMatch = article.title.toLowerCase();
+      const excerptMatch = article.excerpt.toLowerCase();
+      const categoryMatch = article.category.toLowerCase();
+      
+      return searchTerms.every(term => 
+        titleMatch.includes(term) || 
+        excerptMatch.includes(term) || 
+        categoryMatch.includes(term)
+      );
+    });
+  };
+
+  const filteredArticles = searchArticles(articles, searchTerm)
+    .filter(article => selectedCategory === '' || article.category === selectedCategory);
 
   return (
     <div>
@@ -422,10 +453,11 @@ const Blog: React.FC = () => {
       <section className="py-10 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            {/* Barra de Pesquisa */}
             <div className="relative w-full md:w-96">
               <input
                 type="text"
-                placeholder="Buscar artigos..."
+                placeholder="Buscar artigos por tema, sintoma ou tratamento..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-terracota-600 focus:border-transparent"
@@ -435,6 +467,7 @@ const Blog: React.FC = () => {
               </div>
             </div>
             
+            {/* Filtro de Categorias */}
             <div className="w-full md:w-auto flex">
               <div className="relative w-full md:w-48">
                 <select
@@ -443,7 +476,7 @@ const Blog: React.FC = () => {
                   className="w-full px-4 py-2 border border-gray-300 rounded-full appearance-none focus:outline-none focus:ring-2 focus:ring-terracota-600 focus:border-transparent"
                 >
                   <option value="">Todas as categorias</option>
-                  {categories.map((category) => (
+                  {mainCategories.map((category) => (
                     <option key={category} value={category}>
                       {category}
                     </option>
@@ -455,6 +488,22 @@ const Blog: React.FC = () => {
               </div>
             </div>
           </div>
+
+          {/* Tags de Categorias */}
+          <div className="mt-6 flex flex-wrap gap-2 justify-center">
+            {mainCategories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors
+                  ${selectedCategory === category 
+                    ? 'bg-terracota-600 text-white' 
+                    : 'bg-white text-gray-700 hover:bg-terracota-50'}`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -465,7 +514,26 @@ const Blog: React.FC = () => {
             <>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredArticles.map((article) => (
-                  <BlogCard key={article.id} {...article} />
+                  <div key={article.id}>
+                    <BlogCard {...article} />
+                    {/* Artigos Relacionados */}
+                    {article.id && (
+                      <div className="mt-4">
+                        <h4 className="text-sm font-medium text-gray-600 mb-2">Artigos Relacionados:</h4>
+                        <div className="space-y-2">
+                          {findRelatedArticles(article, articles).map((related) => (
+                            <a
+                              key={related.id}
+                              href={`/blog/${related.id}`}
+                              className="block text-sm text-terracota-600 hover:text-terracota-700"
+                            >
+                              {related.title}
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 ))}
               </div>
             </>
