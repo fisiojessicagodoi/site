@@ -2,6 +2,7 @@ import React from 'react';
 import SectionTitle from '../components/ui/SectionTitle';
 import { CheckCircle2, Award, GraduationCap, Heart, Clock } from 'lucide-react';
 import jessicaPerfilImg from '../assets/jessica-perfil.jpg.jpg';
+import { Link } from 'react-router-dom';
 
 const About: React.FC = () => {
   const qualifications = [
@@ -114,9 +115,9 @@ const About: React.FC = () => {
             <ul className="space-y-6">
               <li className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-terracota-600">
                 <span className="block text-xs text-gray-500 mb-1 font-semibold uppercase">2025 • Mais recente</span>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/40248754/" target="_blank" rel="noopener noreferrer" className="text-terracota-700 font-bold hover:underline text-base md:text-lg">
+                <Link to="/blog/treinamento-assoalho-pelvico" className="text-terracota-700 font-bold hover:underline text-base md:text-lg">
                   Adherence and self-efficacy of pregnant women to perform pelvic floor muscle training through a health education application: a feasibility study
-                </a>
+                </Link>
                 <div className="text-gray-700 text-sm mt-1">
                   Angélico C, Dos Santos Sousa AJ, <b>de Godoi Fernandes JG</b>, da Costa Vilela I, Pereira Baldon VS, Driusso P<br/>
                   <span className="italic">Mhealth</span>. 2025 Mar 14;11:17.
@@ -127,9 +128,9 @@ const About: React.FC = () => {
               </li>
               <li className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-terracota-600">
                 <span className="block text-xs text-gray-500 mb-1 font-semibold uppercase">2023</span>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/37089264/" target="_blank" rel="noopener noreferrer" className="text-terracota-700 font-bold hover:underline text-base md:text-lg">
+                <Link to="/blog/breathing-pelvic-floor" className="text-terracota-700 font-bold hover:underline text-base md:text-lg">
                   Development and validation of a prototype multimedia application to enhance health education on the pelvic floor muscles among pregnant and puerperal women in Brazil
-                </a>
+                </Link>
                 <div className="text-gray-600 text-sm mt-1">
                   Ana Jéssica Dos Santos Sousa, <b>Jessica Gabriela de Godoi Fernandes</b>, Carolina Angélico, Patricia Driusso<br/>
                   <span className="italic">Mhealth</span>. 2023 Apr 10:9:14.
@@ -140,9 +141,9 @@ const About: React.FC = () => {
               </li>
               <li className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-terracota-600">
                 <span className="block text-xs text-gray-500 mb-1 font-semibold uppercase">2021</span>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/33416969/" target="_blank" rel="noopener noreferrer" className="text-terracota-700 font-bold hover:underline text-base md:text-lg">
+                <Link to="/blog/fisioterapia-pelvica-campinas" className="text-terracota-700 font-bold hover:underline text-base md:text-lg">
                   Reliability of the PERFECT scheme assessed by unidigital and bidigital vaginal palpation
-                </a>
+                </Link>
                 <div className="text-gray-600 text-sm mt-1">
                   Jordana Barbosa da Silva, <b>Jéssica Gabriela de Godoi Fernandes</b>, Bruna Raquel Caracciolo, Sara Campana Zanello, Tatiana de Oliveira Sato, Patricia Driusso<br/>
                   <span className="italic">Int Urogynecol J</span>. 2021 Dec;32(12):3199-3207.
