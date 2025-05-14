@@ -1,13 +1,14 @@
 import React from 'react';
-import { Activity, Heart, Baby, Droplet } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import SectionTitle from '../ui/SectionTitle';
-import ServiceCard from '../ui/ServiceCard';
-import Button from '../ui/Button';
+import { Activity, Droplet, Heart, Home } from 'lucide-react';
+import SectionTitle from '../../components/ui/SectionTitle';
+import ServiceCard from '../../components/ui/ServiceCard';
+import Button from '../../components/ui/Button';
 import dorPelvicaImg from '../../assets/dor-pelvica.png';
 import incontinenciaImg from '../../assets/incontinencia-servico.png';
-import prolapsoImg from '../../assets/prolapso-servico.png';
 import disfuncaoServicoImg from '../../assets/disfunçao-servico.png';
+import prolapsoImg from '../../assets/prolapso-servico.png';
+import domicilioImg from '../../assets/domicilio-servico.png';
 
 // SVG minimalista de útero
 const UteroIcon = () => (
@@ -54,28 +55,14 @@ const FeaturedServices: React.FC = () => {
     <section className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
         <SectionTitle 
-          subtitle="Como posso te ajudar?" 
-          title="Serviços de Fisioterapia Pélvica"
+          subtitle="Serviços de Fisioterapia Pélvica" 
+          title="Como posso te ajudar?"
           centered 
         />
         <p className="text-center text-gray-700 mb-10 mt-6 text-base md:text-lg">
           Explico cada etapa do tratamento, sem mistério. Você participa das decisões e entende o que está acontecendo com seu corpo.
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-            <h3 className="font-bold text-terracota-700 mb-2">Sintomas Urinários e Intestinais</h3>
-            <p className="text-gray-600">Tratamento para incontinência urinária, escapes, urgência, constipação intestinal e outros desconfortos do dia a dia.</p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-            <h3 className="font-bold text-terracota-700 mb-2">Disfunções Sexuais</h3>
-            <p className="text-gray-600">Atendimento para dor na relação, vaginismo, dificuldade de penetração e desconfortos íntimos.</p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-            <h3 className="font-bold text-terracota-700 mb-2">Prolapso Pélvico</h3>
-            <p className="text-gray-600">Cuidado especializado para sensação de peso, abaulamento ou desconforto vaginal, com foco em qualidade de vida.</p>
-          </div>
-        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service) => (
