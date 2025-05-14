@@ -13,6 +13,18 @@ export default defineConfig({
         main: './index.html',
       },
     },
+    // Otimizações para geração de páginas estáticas
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
+    // Gera arquivos estáticos otimizados
+    assetsInlineLimit: 4096,
+    cssCodeSplit: true,
+    sourcemap: false,
   },
   publicDir: 'public',
 });
