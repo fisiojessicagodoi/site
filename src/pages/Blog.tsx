@@ -21,7 +21,7 @@ const articles = [
     date: '10 de fevereiro de 2025',
     readTime: '5 min de leitura',
     author: 'Jéssica Godoi',
-    image: '/images/blog-minimal-1.jpg',
+    image: '/images/blog/exercicios-assoalho-pelvico.webp',
     category: 'Exercícios'
   },
   {
@@ -31,7 +31,7 @@ const articles = [
     date: '17 de fevereiro de 2025',
     readTime: '7 min de leitura',
     author: 'Jéssica Godoi',
-    image: '/images/blog-minimal-2.jpg',
+    image: '/images/blog/prolapso-pelvico.webp',
     category: 'Saúde Pélvica'
   },
   {
@@ -41,7 +41,7 @@ const articles = [
     date: '24 de fevereiro de 2025',
     readTime: '6 min de leitura',
     author: 'Jéssica Godoi',
-    image: '/images/blog-minimal-3.jpg',
+    image: '/images/blog/dor-pelvica.webp',
     category: 'Saúde Pélvica'
   },
   {
@@ -51,7 +51,7 @@ const articles = [
     date: '3 de março de 2025',
     readTime: '4 min de leitura',
     author: 'Jéssica Godoi',
-    image: 'https://images.pexels.com/photos/6551803/pexels-photo-6551803.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    image: '/images/blog/incontinencia-urinaria.webp',
     category: 'Incontinência Urinária'
   },
   {
@@ -61,7 +61,7 @@ const articles = [
     date: '17 de março de 2025',
     readTime: '8 min de leitura',
     author: 'Jéssica Godoi',
-    image: 'https://images.pexels.com/photos/7176319/pexels-photo-7176319.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    image: '/images/blog/endometriose.webp',
     category: 'Saúde Pélvica'
   },
   {
@@ -71,7 +71,7 @@ const articles = [
     date: '24 de março de 2025',
     readTime: '5 min de leitura',
     author: 'Jéssica Godoi',
-    image: 'https://images.pexels.com/photos/8941790/pexels-photo-8941790.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    image: '/images/blog/postura-saude-pelvica.webp',
     category: 'Dicas de Saúde'
   },
   {
@@ -81,7 +81,7 @@ const articles = [
     date: '31 de março de 2025',
     readTime: '7 min de leitura',
     author: 'Jéssica Godoi',
-    image: 'https://images.pexels.com/photos/8436744/pexels-photo-8436744.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    image: '/images/blog/exercicios-prolapso.webp',
     category: 'Exercícios'
   },
   {
@@ -91,7 +91,7 @@ const articles = [
     date: '7 de abril de 2025',
     readTime: '6 min de leitura',
     author: 'Jéssica Godoi',
-    image: 'https://images.pexels.com/photos/3758056/pexels-photo-3758056.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    image: '/images/blog/respiracao-assoalho-pelvico.webp',
     category: 'Exercícios'
   },
   {
@@ -111,7 +111,7 @@ const articles = [
     date: '21 de abril de 2025',
     readTime: '6 min de leitura',
     author: 'Jéssica Godoi',
-    image: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    image: '/images/blog/sindrome-rokitansky.webp',
     category: 'Saúde Pélvica'
   },
   {
@@ -121,7 +121,7 @@ const articles = [
     date: '12 de maio de 2024',
     readTime: '4 min de leitura',
     author: 'Jéssica Godoi',
-    image: '',
+    image: '/images/blog/autocuidado-mulher.webp',
     category: 'Dicas de Saúde'
   },
   {
@@ -131,7 +131,7 @@ const articles = [
     date: '01 de julho de 2025',
     readTime: '6 min de leitura',
     author: 'Jéssica Godoi',
-    image: '/images/blog-incontinencia-urgencia.jpg',
+    image: '/images/blog/incontinencia-urgencia.webp',
     category: 'Incontinência Urinária'
   },
   {
@@ -141,7 +141,7 @@ const articles = [
     date: '02 de julho de 2025',
     readTime: '5 min de leitura',
     author: 'Jéssica Godoi',
-    image: '/images/blog-incontinencia-esforco.jpg',
+    image: '/images/blog/incontinencia-esforco.webp',
     category: 'Incontinência Urinária'
   },
   {
@@ -151,7 +151,7 @@ const articles = [
     date: '03 de julho de 2025',
     readTime: '6 min de leitura',
     author: 'Jéssica Godoi',
-    image: '/images/blog-incontinencia-mista.jpg',
+    image: '/images/blog/incontinencia-mista.webp',
     category: 'Incontinência Urinária'
   },
   {
@@ -161,7 +161,7 @@ const articles = [
     date: '04 de julho de 2025',
     readTime: '5 min de leitura',
     author: 'Jéssica Godoi',
-    image: '/images/blog-diferenca-incontinencias.jpg',
+    image: '/images/blog/tipos-incontinencia.webp',
     category: 'Incontinência Urinária'
   },
   {
@@ -171,7 +171,7 @@ const articles = [
     date: '05 de julho de 2025',
     readTime: '4 min de leitura',
     author: 'Jéssica Godoi',
-    image: '/images/blog-urgencia-miccional.jpg',
+    image: '/images/blog/urgencia-miccional.webp',
     category: 'Incontinência Urinária'
   },
   {
@@ -181,7 +181,7 @@ const articles = [
     date: '06 de julho de 2025',
     readTime: '4 min de leitura',
     author: 'Jéssica Godoi',
-    image: '/images/blog-hesitacao-miccional.jpg',
+    image: '/images/blog/hesitacao-miccional.webp',
     category: 'Incontinência Urinária'
   },
   {
@@ -191,7 +191,7 @@ const articles = [
     date: '07 de julho de 2025',
     readTime: '5 min de leitura',
     author: 'Jéssica Godoi',
-    image: '/images/blog-esvaziamento-incompleto.jpg',
+    image: '/images/blog/esvaziamento-incompleto.webp',
     category: 'Incontinência Urinária'
   },
   {
@@ -201,7 +201,7 @@ const articles = [
     date: '08 de julho de 2025',
     readTime: '4 min de leitura',
     author: 'Jéssica Godoi',
-    image: '/images/blog-gotejamento.jpg',
+    image: '/images/blog/gotejamento.webp',
     category: 'Incontinência Urinária'
   },
   {
@@ -211,7 +211,7 @@ const articles = [
     date: '09 de julho de 2025',
     readTime: '5 min de leitura',
     author: 'Jéssica Godoi',
-    image: '/images/blog-diario-miccional.jpg',
+    image: '/images/blog/diario-miccional.webp',
     category: 'Dicas de Saúde'
   },
   {
@@ -221,7 +221,7 @@ const articles = [
     date: '10 de julho de 2025',
     readTime: '4 min de leitura',
     author: 'Jéssica Godoi',
-    image: '/images/blog-tempo-sem-urinar.jpg',
+    image: '/images/blog/tempo-sem-urinar.webp',
     category: 'Dicas de Saúde'
   },
   {
@@ -231,7 +231,7 @@ const articles = [
     date: '11 de julho de 2025',
     readTime: '5 min de leitura',
     author: 'Jéssica Godoi',
-    image: '/images/blog-habitos-ruins.jpg',
+    image: '/images/blog/habitos-ruins.webp',
     category: 'Dicas de Saúde'
   },
   {
@@ -241,7 +241,7 @@ const articles = [
     date: '12 de julho de 2025',
     readTime: '6 min de leitura',
     author: 'Jéssica Godoi',
-    image: '/images/blog-constipacao.jpg',
+    image: '/images/blog/constipacao.webp',
     category: 'Saúde Pélvica'
   },
   {
@@ -251,7 +251,7 @@ const articles = [
     date: '13 de julho de 2025',
     readTime: '5 min de leitura',
     author: 'Jéssica Godoi',
-    image: '/images/blog-criterios-roma.jpg',
+    image: '/images/blog/criterios-roma.webp',
     category: 'Saúde Pélvica'
   },
   {
@@ -261,7 +261,7 @@ const articles = [
     date: '14 de julho de 2025',
     readTime: '4 min de leitura',
     author: 'Jéssica Godoi',
-    image: '/images/blog-bristol.jpg',
+    image: '/images/blog/escala-bristol.webp',
     category: 'Saúde Pélvica'
   },
   {
@@ -271,7 +271,7 @@ const articles = [
     date: '15 de julho de 2025',
     readTime: '6 min de leitura',
     author: 'Jéssica Godoi',
-    image: '/images/blog-dispareunia-vaginismo.jpg',
+    image: '/images/blog/dispareunia-vaginismo.webp',
     category: 'Dor na Relação'
   },
   {
@@ -281,7 +281,7 @@ const articles = [
     date: '16 de julho de 2025',
     readTime: '5 min de leitura',
     author: 'Jéssica Godoi',
-    image: '/images/blog-vulvodinia.jpg',
+    image: '/images/blog/vulvodinia.webp',
     category: 'Dor na Relação'
   },
   {
@@ -291,7 +291,7 @@ const articles = [
     date: '17 de julho de 2025',
     readTime: '5 min de leitura',
     author: 'Jéssica Godoi',
-    image: '/images/blog-clitoris.jpg',
+    image: '/images/blog/clitoris.webp',
     category: 'Dor na Relação'
   },
   {
@@ -301,7 +301,7 @@ const articles = [
     date: '18 de julho de 2025',
     readTime: '4 min de leitura',
     author: 'Jéssica Godoi',
-    image: '/images/blog-aderencia-clitoris.jpg',
+    image: '/images/blog/aderencia-clitoris.webp',
     category: 'Dor na Relação'
   },
   {
@@ -311,7 +311,7 @@ const articles = [
     date: '19 de julho de 2025',
     readTime: '5 min de leitura',
     author: 'Jéssica Godoi',
-    image: '/images/blog-desejo-baixo.jpg',
+    image: '/images/blog/desejo-sexual.webp',
     category: 'Dor na Relação'
   },
   {
@@ -321,7 +321,7 @@ const articles = [
     date: '20 de julho de 2025',
     readTime: '5 min de leitura',
     author: 'Jéssica Godoi',
-    image: '/images/blog-dificuldade-orgasmo.jpg',
+    image: '/images/blog/dificuldade-orgasmo.webp',
     category: 'Dor na Relação'
   },
   {
@@ -331,7 +331,7 @@ const articles = [
     date: '21 de julho de 2025',
     readTime: '5 min de leitura',
     author: 'Jéssica Godoi',
-    image: '/images/blog-dispareunia-tipos.jpg',
+    image: '/images/blog/dispareunia-tipos.webp',
     category: 'Dor na Relação'
   },
   {
@@ -341,7 +341,7 @@ const articles = [
     date: '22 de julho de 2025',
     readTime: '6 min de leitura',
     author: 'Jéssica Godoi',
-    image: '/images/blog-fatores-disfuncao.jpg',
+    image: '/images/blog/fatores-disfuncao.webp',
     category: 'Dor na Relação'
   },
   {
@@ -361,7 +361,7 @@ const articles = [
     date: '24 de julho de 2025',
     readTime: '5 min de leitura',
     author: 'Jéssica Godoi',
-    image: '/images/blog-fisioterapia-campinas.jpg',
+    image: '/images/blog/fisioterapia-campinas.webp',
     category: 'Dicas de Saúde'
   },
   {
@@ -371,7 +371,7 @@ const articles = [
     date: '25 de julho de 2025',
     readTime: '5 min de leitura',
     author: 'Jéssica Godoi',
-    image: '/images/blog-atendimento-domiciliar.jpg',
+    image: '/images/blog/atendimento-domiciliar.webp',
     category: 'Dicas de Saúde'
   }
 ];
