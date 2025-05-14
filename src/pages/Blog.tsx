@@ -10,8 +10,8 @@ const Blog: React.FC = () => {
   const articles = [
     {
       id: 'treinamento-assoalho-pelvico',
-      title: 'Exercícios Essenciais para o Assoalho Pélvico para Melhor Saúde',
-      excerpt: 'Descubra os exercícios mais eficazes para fortalecer os músculos do assoalho pélvico e melhorar a saúde pélvica geral.',
+      title: 'Exercícios para Assoalho Pélvico: Guia Completo de Treinamento e Benefícios',
+      excerpt: 'Aprenda os exercícios mais eficazes para fortalecer o assoalho pélvico, prevenir incontinência e melhorar a saúde íntima. Guia completo com técnicas e benefícios.',
       date: '10 de fevereiro de 2025',
       readTime: '5 min de leitura',
       author: 'Jéssica Godoi',
@@ -20,8 +20,8 @@ const Blog: React.FC = () => {
     },
     {
       id: 'prolapso-pelvico-artigo-2',
-      title: 'Prolapso Pélvico: Como Identificar, Prevenir e Tratar',
-      excerpt: 'Entenda os sinais do prolapso pélvico, fatores de risco, dicas de prevenção e as melhores opções de tratamento fisioterapêutico.',
+      title: 'Prolapso Pélvico: Sintomas, Tratamento e Prevenção em Campinas',
+      excerpt: 'Descubra os sinais do prolapso pélvico, opções de tratamento com fisioterapia pélvica e estratégias de prevenção. Atendimento especializado em Campinas.',
       date: '17 de fevereiro de 2025',
       readTime: '7 min de leitura',
       author: 'Jéssica Godoi',
@@ -30,8 +30,8 @@ const Blog: React.FC = () => {
     },
     {
       id: 'dor-pelvica-cronica',
-      title: 'Entendendo e Gerenciando Dor Pélvica Crônica',
-      excerpt: 'Explore as causas da dor pélvica crônica e abordagens baseadas em evidências para encontrar alívio e melhorar a qualidade de vida.',
+      title: 'Dor Pélvica Crônica: Causas, Tratamento e Como a Fisioterapia Pélvica Ajuda',
+      excerpt: 'Entenda as causas da dor pélvica crônica, sintomas comuns e como a fisioterapia pélvica pode ajudar no alívio da dor. Tratamento especializado em Campinas.',
       date: '24 de fevereiro de 2025',
       readTime: '6 min de leitura',
       author: 'Jéssica Godoi',
@@ -40,8 +40,8 @@ const Blog: React.FC = () => {
     },
     {
       id: 'incontinencia-mitos',
-      title: 'Desmistificando Mitos Sobre Incontinência',
-      excerpt: 'Separando fatos de mitos sobre incontinência urinária para ajudar você a entender e lidar melhor com essa condição comum.',
+      title: 'Incontinência Urinária: Mitos e Verdades que Você Precisa Saber',
+      excerpt: 'Desmistifique os principais mitos sobre incontinência urinária e descubra as verdades sobre prevenção e tratamento com fisioterapia pélvica em Campinas.',
       date: '3 de março de 2025',
       readTime: '4 min de leitura',
       author: 'Jéssica Godoi',
@@ -50,8 +50,8 @@ const Blog: React.FC = () => {
     },
     {
       id: 'endometriosis-management',
-      title: 'Fisioterapia no Manejo da Endometriose',
-      excerpt: 'Como a fisioterapia pélvica especializada pode complementar o tratamento médico da endometriose e reduzir a dor.',
+      title: 'Endometriose: Como a Fisioterapia Pélvica Pode Ajudar no Tratamento',
+      excerpt: 'Descubra como a fisioterapia pélvica especializada complementa o tratamento da endometriose, reduz a dor e melhora a qualidade de vida. Atendimento em Campinas.',
       date: '17 de março de 2025',
       readTime: '8 min de leitura',
       author: 'Jéssica Godoi',
@@ -60,8 +60,8 @@ const Blog: React.FC = () => {
     },
     {
       id: 'sitting-pelvic-health',
-      title: 'Como a Postura ao Sentar Afeta Sua Saúde Pélvica',
-      excerpt: 'A surpreendente relação entre hábitos ao sentar e disfunção do assoalho pélvico, além de dicas para uma postura melhor.',
+      title: 'Postura e Saúde Pélvica: Como Sentar Corretamente para Prevenir Problemas',
+      excerpt: 'Aprenda a relação entre postura e saúde pélvica, dicas para sentar corretamente e exercícios para prevenir disfunções do assoalho pélvico.',
       date: '24 de março de 2025',
       readTime: '5 min de leitura',
       author: 'Jéssica Godoi',
@@ -70,8 +70,8 @@ const Blog: React.FC = () => {
     },
     {
       id: 'exercise-prolapse',
-      title: 'Exercícios Seguros para Prolapso de Órgãos Pélvicos',
-      excerpt: 'Como se manter ativa e preservar o assoalho pélvico mesmo com diagnóstico de prolapso.',
+      title: 'Exercícios para Prolapso Pélvico: Guia Seguro e Eficaz',
+      excerpt: 'Descubra exercícios seguros e eficazes para quem tem prolapso pélvico. Aprenda como se manter ativa sem comprometer a saúde do assoalho pélvico.',
       date: '31 de março de 2025',
       readTime: '7 min de leitura',
       author: 'Jéssica Godoi',
@@ -80,8 +80,8 @@ const Blog: React.FC = () => {
     },
     {
       id: 'breathing-pelvic-floor',
-      title: 'A Relação Entre Respiração e Função do Assoalho Pélvico',
-      excerpt: 'Entenda como o padrão respiratório influencia o assoalho pélvico e técnicas simples para melhor coordenação.',
+      title: 'Respiração e Assoalho Pélvico: Técnicas para Fortalecimento e Controle',
+      excerpt: 'Aprenda como a respiração afeta o assoalho pélvico e técnicas simples para melhorar a coordenação e fortalecimento. Guia prático com exercícios.',
       date: '7 de abril de 2025',
       readTime: '6 min de leitura',
       author: 'Jéssica Godoi',
@@ -90,8 +90,8 @@ const Blog: React.FC = () => {
     },
     {
       id: 'prolapso-pelvico-artigo',
-      title: 'Entenda o Prolapso Pélvico: Sintomas, Prevenção e Tratamento',
-      excerpt: 'Saiba como identificar sinais de prolapso pélvico, estratégias de prevenção e as melhores opções de tratamento fisioterapêutico.',
+      title: 'Prolapso Pélvico: Diagnóstico, Tratamento e Prevenção em Campinas',
+      excerpt: 'Guia completo sobre prolapso pélvico: sintomas, diagnóstico, opções de tratamento com fisioterapia pélvica e estratégias de prevenção em Campinas.',
       date: '14 de abril de 2025',
       readTime: '7 min de leitura',
       author: 'Jéssica Godoi',
@@ -100,8 +100,8 @@ const Blog: React.FC = () => {
     },
     {
       id: 'sindrome-rokitansky',
-      title: 'Síndrome de Rokitansky: Entenda a Condição e as Possibilidades de Tratamento',
-      excerpt: 'Descubra o que é a Síndrome de Rokitansky, seus sintomas, diagnóstico e como a fisioterapia pélvica pode ajudar no bem-estar e qualidade de vida.',
+      title: 'Síndrome de Rokitansky: Tratamento e Qualidade de Vida com Fisioterapia Pélvica',
+      excerpt: 'Entenda a Síndrome de Rokitansky, sintomas, diagnóstico e como a fisioterapia pélvica pode melhorar a qualidade de vida. Atendimento especializado em Campinas.',
       date: '21 de abril de 2025',
       readTime: '6 min de leitura',
       author: 'Jéssica Godoi',
@@ -110,12 +110,12 @@ const Blog: React.FC = () => {
     },
     {
       id: 'homenagem-dia-das-maes',
-      title: 'O Cuidado que Aprendi com as Mulheres da Minha Vida: Uma Homenagem no Dia das Mães',
+      title: 'Dia das Mães: A Importância do Autocuidado na Saúde da Mulher',
+      excerpt: 'Reflexão sobre o cuidado com a saúde da mulher, a importância do autocuidado e como a fisioterapia pélvica pode ajudar na qualidade de vida das mães.',
       date: '12 de maio de 2024',
       readTime: '4 min de leitura',
       author: 'Jéssica Godoi',
-      image: '', // Sem foto
-      excerpt: 'Uma reflexão sobre o cuidado, a inspiração familiar e a importância de valorizar quem cuida de todos, especialmente no Dia das Mães.',
+      image: '',
       category: 'Reflexão',
       content: `
         Desde pequena, cresci cercada por mulheres fortes, generosas e acolhedoras. Lembro da minha avó ajudando vizinhas, amigas e familiares, sempre pronta a ouvir, aconselhar e oferecer um gesto de cuidado. Minha mãe seguiu o mesmo caminho, e, naturalmente, esse exemplo se tornou parte de quem eu sou.
@@ -131,8 +131,8 @@ const Blog: React.FC = () => {
     },
     {
       id: 'incontinencia-urinaria-urgencia',
-      title: 'Incontinência Urinária de Urgência: Sintomas, Causas e Tratamento em Campinas',
-      excerpt: 'Descubra o que é incontinência urinária de urgência, principais sintomas, causas e como a fisioterapia pélvica pode ajudar no controle desse problema. Atendimento presencial e domiciliar em Campinas.',
+      title: 'Incontinência Urinária de Urgência: Sintomas, Tratamento e Prevenção em Campinas',
+      excerpt: 'Descubra os sintomas da incontinência urinária de urgência, causas, tratamento com fisioterapia pélvica e estratégias de prevenção. Atendimento em Campinas.',
       date: '01 de julho de 2025',
       readTime: '6 min de leitura',
       author: 'Jéssica Godoi',
@@ -141,8 +141,8 @@ const Blog: React.FC = () => {
     },
     {
       id: 'incontinencia-urinaria-esforco',
-      title: 'Incontinência Urinária de Esforço: Como Identificar e Tratar',
-      excerpt: 'Saiba como reconhecer a incontinência urinária de esforço, suas causas e as melhores opções de tratamento fisioterapêutico em Campinas.',
+      title: 'Incontinência Urinária de Esforço: Tratamento e Prevenção em Campinas',
+      excerpt: 'Aprenda sobre incontinência urinária de esforço, sintomas, causas e como a fisioterapia pélvica pode ajudar no tratamento. Atendimento especializado em Campinas.',
       date: '02 de julho de 2025',
       readTime: '5 min de leitura',
       author: 'Jéssica Godoi',
@@ -151,8 +151,8 @@ const Blog: React.FC = () => {
     },
     {
       id: 'incontinencia-urinaria-mista',
-      title: 'Incontinência Urinária Mista: Diferenças, Sintomas e Tratamento',
-      excerpt: 'Entenda o que é incontinência urinária mista, como diferenciar dos outros tipos e como a fisioterapia pélvica pode ajudar. Atendimento em Campinas e domicílio.',
+      title: 'Incontinência Urinária Mista: Sintomas, Diagnóstico e Tratamento em Campinas',
+      excerpt: 'Entenda a incontinência urinária mista, diferenças dos outros tipos e como a fisioterapia pélvica pode ajudar no tratamento. Atendimento em Campinas.',
       date: '03 de julho de 2025',
       readTime: '6 min de leitura',
       author: 'Jéssica Godoi',
@@ -161,8 +161,8 @@ const Blog: React.FC = () => {
     },
     {
       id: 'diferenca-incontinencias',
-      title: 'Diferença entre Incontinência de Urgência, Esforço e Mista',
-      excerpt: 'Veja como identificar cada tipo de incontinência urinária e qual o tratamento mais indicado para cada caso. Fisioterapia pélvica em Campinas.',
+      title: 'Tipos de Incontinência Urinária: Como Identificar e Tratar Cada Caso',
+      excerpt: 'Guia completo sobre os diferentes tipos de incontinência urinária: sintomas, diagnóstico e tratamento com fisioterapia pélvica em Campinas.',
       date: '04 de julho de 2025',
       readTime: '5 min de leitura',
       author: 'Jéssica Godoi',
@@ -171,8 +171,8 @@ const Blog: React.FC = () => {
     },
     {
       id: 'urgencia-miccional',
-      title: 'Urgência Miccional: O que é, Sintomas e Tratamento',
-      excerpt: 'Saiba o que é urgência miccional, como ela afeta a qualidade de vida e como a fisioterapia pode ajudar no controle dos sintomas.',
+      title: 'Urgência Miccional: Causas, Sintomas e Tratamento em Campinas',
+      excerpt: 'Saiba tudo sobre urgência miccional: causas, sintomas e como a fisioterapia pélvica pode ajudar no controle. Atendimento especializado em Campinas.',
       date: '05 de julho de 2025',
       readTime: '4 min de leitura',
       author: 'Jéssica Godoi',
@@ -181,8 +181,8 @@ const Blog: React.FC = () => {
     },
     {
       id: 'hesitacao-miccional',
-      title: 'Hesitação Miccional: Entenda as Causas e Soluções',
-      excerpt: 'Descubra o que é hesitação miccional, suas causas e como a fisioterapia pélvica pode ajudar no tratamento. Atendimento em Campinas.',
+      title: 'Hesitação Miccional: Causas, Sintomas e Tratamento em Campinas',
+      excerpt: 'Entenda a hesitação miccional, suas causas e como a fisioterapia pélvica pode ajudar no tratamento. Atendimento especializado em Campinas.',
       date: '06 de julho de 2025',
       readTime: '4 min de leitura',
       author: 'Jéssica Godoi',
@@ -191,8 +191,8 @@ const Blog: React.FC = () => {
     },
     {
       id: 'esvaziamento-incompleto',
-      title: 'Sensação de Esvaziamento Vesical Incompleto: O que Fazer?',
-      excerpt: 'Entenda por que pode ocorrer a sensação de esvaziamento vesical incompleto e como a fisioterapia pode ajudar a melhorar esse sintoma.',
+      title: 'Esvaziamento Vesical Incompleto: Causas e Tratamento em Campinas',
+      excerpt: 'Descubra as causas da sensação de esvaziamento vesical incompleto e como a fisioterapia pélvica pode ajudar no tratamento. Atendimento em Campinas.',
       date: '07 de julho de 2025',
       readTime: '5 min de leitura',
       author: 'Jéssica Godoi',
