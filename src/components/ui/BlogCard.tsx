@@ -9,8 +9,8 @@ interface BlogCardProps {
   date: string;
   readTime: string;
   author: string;
-  image: string;
-  category?: string;
+  image?: string;
+  category: string;
 }
 
 const BlogCard: React.FC<BlogCardProps> = ({
@@ -21,43 +21,46 @@ const BlogCard: React.FC<BlogCardProps> = ({
   readTime,
   author,
   image,
-  category,
+  category
 }) => {
   return (
-    <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
-      <Link to={`/blog/${id}`}>
-        <img 
-          src={image} 
-          alt={title} 
-          className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105" 
-        />
-      </Link>
-      <div className="p-6 flex-grow">
-        {category && (
-          <span className="inline-block bg-teal-100 text-teal-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-3">
-            {category}
-          </span>
-        )}
-        <Link to={`/blog/${id}`}>
-          <h3 className="font-serif text-xl font-bold text-gray-800 mb-3 hover:text-teal-600 transition-colors">{title}</h3>
-        </Link>
-        <p className="text-gray-600 mb-4">{excerpt}</p>
-        <div className="flex flex-wrap items-center text-sm text-gray-500 gap-3">
-          <div className="flex items-center">
-            <Calendar size={14} className="mr-1" />
-            <span>{date}</span>
+    <Link to={`/blog/${id}`} className="group">
+      <article className="bg-white rounded-lg shadow-sm overflow-hidden transition-transform group-hover:shadow-md">
+        {image && (
+          <div className="aspect-w-16 aspect-h-9">
+            <img 
+              src={image} 
+              alt={title}
+              className="object-cover w-full h-full"
+            />
           </div>
-          <div className="flex items-center">
-            <Clock size={14} className="mr-1" />
+        )}
+        <div className="p-6">
+          <div className="flex items-center text-sm text-gray-500 mb-3">
+            <Calendar className="w-4 h-4 mr-2" />
+            <span>{date}</span>
+            <span className="mx-2">•</span>
+            <Clock className="w-4 h-4 mr-2" />
             <span>{readTime}</span>
           </div>
-          <div className="flex items-center">
-            <User size={14} className="mr-1" />
-            <span>{author}</span>
+          <h3 className="font-medium text-gray-800 group-hover:text-terracota-600 transition-colors mb-2">
+            {title}
+          </h3>
+          <p className="text-gray-600 text-sm line-clamp-2">
+            {excerpt}
+          </p>
+          <div className="mt-4 flex items-center justify-between">
+            <div className="flex items-center text-sm text-gray-500">
+              <User className="w-4 h-4 mr-2" />
+              <span>{author}</span>
+            </div>
+            <span className="text-xs font-medium px-3 py-1 bg-terracota-50 text-terracota-700 rounded-full">
+              {category}
+            </span>
           </div>
         </div>
-      </div>
-    </div>
+      </article>
+    </Link>
   );
 };
 

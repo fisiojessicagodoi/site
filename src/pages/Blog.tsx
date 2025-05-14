@@ -25,7 +25,7 @@ const articles = [
     category: 'Exercícios'
   },
   {
-    id: 'prolapso-pelvico-artigo-2',
+    id: 'prolapso-pelvico',
     title: 'Prolapso Pélvico: Sintomas, Tratamento e Prevenção em Campinas',
     excerpt: 'Descubra os sinais do prolapso pélvico, opções de tratamento com fisioterapia pélvica e estratégias de prevenção. Atendimento especializado em Campinas.',
     date: '17 de fevereiro de 2025',
