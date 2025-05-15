@@ -14,7 +14,7 @@ const ServiceDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   
   // Dados do serviço
-  const services = {
+  const servicos = {
     'dor-pelvica': {
       title: 'Fisioterapia para Dor Pélvica Feminina',
       description: 'Tratamento especializado para dor pélvica, incluindo dispareunia e neuralgia do pudendo. Abordagem baseada em evidências com resultados efetivos. Atendimento em Campinas e região.',
@@ -206,13 +206,13 @@ const ServiceDetail: React.FC = () => {
   };
   
   // Type assertion for TypeScript
-  const service = services[id as keyof typeof services];
+  const service = servicos[id as keyof typeof servicos];
   
   if (!service) {
     return (
       <div className="pt-32 pb-16 text-center">
         <h1 className="text-2xl font-bold mb-4">Serviço não encontrado</h1>
-        <Link to="/services" className="text-blue-200 hover:text-white">
+        <Link to="/servicos" className="text-blue-200 hover:text-white">
           Voltar para todos os serviços
         </Link>
       </div>
@@ -225,7 +225,7 @@ const ServiceDetail: React.FC = () => {
       <section className="relative pt-32 pb-16 bg-sand-to-coral text-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <Link to="/services" className="inline-flex items-center text-terracota-100 hover:text-white mb-6">
+            <Link to="/servicos" className="inline-flex items-center text-terracota-100 hover:text-white mb-6">
               <ArrowLeft size={16} className="mr-1" /> Voltar para Todos os Serviços
             </Link>
             <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6">{service.title}</h1>

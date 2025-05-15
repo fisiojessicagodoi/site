@@ -20,7 +20,7 @@ const UteroIcon = () => (
 );
 
 const FeaturedServices: React.FC = () => {
-  const services = [
+  const servicos = [
     {
       id: 'dor-pelvica',
       title: 'Fisioterapia para Dor Pélvica Crônica e Aguda',
@@ -65,13 +65,13 @@ const FeaturedServices: React.FC = () => {
         
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service) => (
+          {servicos.map((service) => (
             <ServiceCard key={service.id} {...service} />
           ))}
         </div>
         
         <div className="mt-12 text-center">
-          <Link to="/services">
+          <Link to="/servicos">
             <Button variant="primary" size="lg">
               Ver todos os serviços
             </Button>
