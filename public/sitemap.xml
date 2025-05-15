@@ -2,92 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://fisiojessicagodoi.site/</loc>
-    <lastmod>2024-03-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2024-03-19</lastmod>
+    <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://fisiojessicagodoi.site/about</loc>
-    <lastmod>2024-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://fisiojessicagodoi.site/sobre</loc>
+    <lastmod>2024-03-19</lastmod>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://fisiojessicagodoi.site/servicos</loc>
-    <lastmod>2024-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2024-03-19</lastmod>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://fisiojessicagodoi.site/blog</loc>
-    <lastmod>2024-03-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2024-03-19</lastmod>
+    <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://fisiojessicagodoi.site/contact</loc>
-    <lastmod>2024-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fisiojessicagodoi.site/blog/fisioterapia-pelvica-campinas</loc>
-    <lastmod>2024-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fisiojessicagodoi.site/blog/prolapso-pelvico</loc>
-    <lastmod>2024-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fisiojessicagodoi.site/blog/dor-pelvica-cronica</loc>
-    <lastmod>2024-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fisiojessicagodoi.site/blog/incontinencia-mitos</loc>
-    <lastmod>2024-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fisiojessicagodoi.site/blog/tratamento-endometriose</loc>
-    <lastmod>2024-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fisiojessicagodoi.site/blog/sitting-pelvic-health</loc>
-    <lastmod>2024-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fisiojessicagodoi.site/blog/exercise-prolapse</loc>
-    <lastmod>2024-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fisiojessicagodoi.site/blog/breathing-pelvic-floor</loc>
-    <lastmod>2024-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fisiojessicagodoi.site/blog/prolapso-pelvico-artigo</loc>
-    <lastmod>2024-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fisiojessicagodoi.site/blog/sindrome-rokitansky</loc>
-    <lastmod>2024-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://fisiojessicagodoi.site/contato</loc>
+    <lastmod>2024-03-19</lastmod>
+    <priority>0.70</priority>
   </url>
 </urlset>

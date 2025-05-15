@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
                 <Link to="/about" className="text-terracota-100 hover:text-white transition-colors">Sobre</Link>
               </li>
               <li>
-                <Link to="/servicos" className="text-terracota-100 hover:text-white transition-colors">Serviços</Link>
+                <Link to="/services" className="text-terracota-100 hover:text-white transition-colors">Serviços</Link>
               </li>
               <li>
                 <Link to="/blog" className="text-terracota-100 hover:text-white transition-colors">Blog</Link>
@@ -52,24 +52,24 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Column 3: servicos */}
+          {/* Column 3: Services */}
           <div>
             <h3 className="font-serif text-lg font-semibold mb-4">Serviços</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/servicos/dor-pelvica" className="text-terracota-100 hover:text-white transition-colors">Dor Pélvica</Link>
+                <Link to="/services/dor-pelvica" className="text-terracota-100 hover:text-white transition-colors">Dor Pélvica</Link>
               </li>
               <li>
-                <Link to="/servicos/incontinencia" className="text-terracota-100 hover:text-white transition-colors">Incontinência Urinária e Fecal</Link>
+                <Link to="/services/incontinencia" className="text-terracota-100 hover:text-white transition-colors">Incontinência Urinária e Fecal</Link>
               </li>
               <li>
-                <Link to="/servicos/prolapso-pelvico" className="text-terracota-100 hover:text-white transition-colors">Prolapso de Órgãos Pélvicos</Link>
+                <Link to="/services/prolapso-pelvico" className="text-terracota-100 hover:text-white transition-colors">Prolapso de Órgãos Pélvicos</Link>
               </li>
               <li>
-                <Link to="/servicos/disfuncao-sexual" className="text-terracota-100 hover:text-white transition-colors">Disfunções Sexuais Femininas</Link>
+                <Link to="/services/disfuncao-sexual" className="text-terracota-100 hover:text-white transition-colors">Disfunções Sexuais Femininas</Link>
               </li>
               <li>
-                <Link to="/servicos/atendimento-domiciliar" className="text-terracota-100 hover:text-white transition-colors">Atendimento Domiciliar</Link>
+                <Link to="/services/atendimento-domiciliar" className="text-terracota-100 hover:text-white transition-colors">Atendimento Domiciliar</Link>
               </li>
             </ul>
           </div>

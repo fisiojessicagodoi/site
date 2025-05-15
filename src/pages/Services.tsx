@@ -18,8 +18,8 @@ const UteroIcon = () => (
   </svg>
 );
 
-const servicos: React.FC = () => {
-  const servicos = [
+const Services: React.FC = () => {
+  const services = [
     {
       id: 'dor-pelvica',
       title: 'Fisioterapia para Dor Pélvica Crônica e Aguda',
@@ -71,7 +71,7 @@ const servicos: React.FC = () => {
         </div>
       </section>
 
-      {/* servicos Overview */}
+      {/* Services Overview */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
           <SectionTitle 
@@ -81,7 +81,7 @@ const servicos: React.FC = () => {
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-            {servicos.map((service) => (
+            {services.map((service) => (
               <div key={service.id} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
                 <img src={service.image} alt={service.title} className="w-full h-52 object-cover" />
                 <div className="p-6 flex-grow">
@@ -91,7 +91,7 @@ const servicos: React.FC = () => {
                 </div>
                 <div className="px-6 pb-6">
                   <Link 
-                    to={`/servicos/${service.id}`} 
+                    to={`/services/${service.id}`} 
                     className="inline-flex items-center text-terracota-600 hover:text-terracota-800 font-medium"
                   >
                     Saiba mais <ArrowRight size={16} className="ml-1" />
@@ -240,4 +240,4 @@ const servicos: React.FC = () => {
   );
 };
 
-export default servicos;
+export default Services;

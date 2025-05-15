@@ -27,7 +27,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       </div>
       <div className="px-6 pb-6">
         <Link 
-          to={`/servicos/${id}`} 
+          to={`/services/${id}`} 
           className="inline-flex items-center text-terracota-600 hover:text-terracota-800 font-medium"
         >
           Saiba mais <ArrowRight size={16} className="ml-1" />
