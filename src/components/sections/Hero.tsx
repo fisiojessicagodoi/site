@@ -34,14 +34,19 @@ const Hero = () => {
             <p className="text-lg mb-8 max-w-2xl mx-auto text-white/90 drop-shadow-md">
               Atendimento particular, personalizado e baseado em evidências. Sinta-se à vontade para cuidar de você.
             </p>
-            <Link to="/contact">
-              <button 
-                className="bg-white text-terracota-700 px-8 py-3 rounded-full hover:bg-opacity-90 transition-colors shadow-lg"
-                aria-label="Agendar consulta"
-              >
-                Agendar consulta
-              </button>
-            </Link>
+            
+            <div className="mt-8 mb-12">
+              <Link to="/contact" className="inline-block">
+                <button 
+                  className="inline-flex items-center justify-center font-medium rounded-full transition-all
+                           px-8 py-4 text-base text-terracota-900 bg-white hover:bg-white/90 
+                           shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                  aria-label="Agendar consulta"
+                >
+                  Agendar consulta
+                </button>
+              </Link>
+            </div>
           </div>
 
           <div className="text-white">

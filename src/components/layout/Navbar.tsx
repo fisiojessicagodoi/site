@@ -37,28 +37,37 @@ const Navbar: React.FC = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
-          <Link to="/" className="flex items-center">
-            <Logo />
-            <span className={`ml-2 font-serif font-bold text-xl md:text-2xl ${isScrolled ? 'text-terracota-800' : 'text-white'}`}>
-              Jéssica Godoi
-            </span>
-          </Link>
+          {/* Logo */}
+          <div className="w-1/4">
+            <Link to="/" className="flex items-center">
+              <Logo />
+              <span className={`ml-2 font-serif font-bold text-xl md:text-2xl ${isScrolled ? 'text-terracota-800' : 'text-white'}`}>
+                Jéssica Godoi
+              </span>
+            </Link>
+          </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`font-medium transition-colors duration-200 ${
-                  location.pathname === link.path
-                    ? isScrolled ? 'text-terracota-600' : 'text-terracota-100'
-                    : isScrolled ? 'text-gray-800 hover:text-terracota-600' : 'text-white hover:text-terracota-100'
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
+          <nav className="hidden md:flex items-center justify-center flex-1">
+            <div className="flex space-x-8">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`font-medium transition-colors duration-200 ${
+                    location.pathname === link.path
+                      ? isScrolled ? 'text-terracota-600' : 'text-terracota-100'
+                      : isScrolled ? 'text-gray-800 hover:text-terracota-600' : 'text-white hover:text-terracota-100'
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </nav>
+
+          {/* Botão Agende Agora */}
+          <div className="hidden md:block w-1/4 text-right">
             <a
               href="https://wa.link/32p5y9" 
               target="_blank"
@@ -71,7 +80,7 @@ const Navbar: React.FC = () => {
             >
               Agende agora
             </a>
-          </nav>
+          </div>
 
           {/* Mobile menu button */}
           <button
