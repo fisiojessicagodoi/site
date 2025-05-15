@@ -11,14 +11,16 @@
     "serve": "node dist/server/server.js",
     "start": "npm run build && npm run serve",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "convert-images": "node scripts/convert-images.js"
   },
   "dependencies": {
     "express": "^4.21.2",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.30.0"
+    "react-router-dom": "^6.30.0",
+    "sharp": "^0.32.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.1",
