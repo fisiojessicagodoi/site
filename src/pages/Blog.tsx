@@ -43,7 +43,16 @@ const articles = [
     readTime: '7 min de leitura',
     author: 'Jéssica Godoi',
     image: '/images/blog/prolapso-pelvico.webp',
-    category: 'Saúde Pélvica'
+    category: 'Saúde Pélvica',
+    content: `<p>O <strong>prolapso pélvico</strong> é uma condição que afeta muitas mulheres, causando desconforto e impactando a qualidade de vida.</p>
+      <h2>Sintomas comuns</h2>
+      <ul>
+        <li>Sensação de peso na região pélvica</li>
+        <li>Incontinência urinária ou fecal</li>
+        <li>Dor durante a relação sexual</li>
+      </ul>
+      <h2>Tratamento e prevenção</h2>
+      <p>O tratamento inclui fisioterapia pélvica, exercícios específicos e, em alguns casos, cirurgia. A prevenção envolve manter um peso saudável e praticar exercícios regulares.</p>`
   },
   {
     id: 'dor-pelvica-cronica',
@@ -53,7 +62,16 @@ const articles = [
     readTime: '6 min de leitura',
     author: 'Jéssica Godoi',
     image: '/images/blog/dor-pelvica.webp',
-    category: 'Saúde Pélvica'
+    category: 'Saúde Pélvica',
+    content: `<p>A <strong>dor pélvica crônica</strong> pode ser causada por diversas condições, incluindo endometriose e síndrome do intestino irritável.</p>
+      <h2>Causas e sintomas</h2>
+      <ul>
+        <li>Dor persistente na região pélvica</li>
+        <li>Desconforto durante a relação sexual</li>
+        <li>Problemas urinários ou intestinais</li>
+      </ul>
+      <h2>Tratamento com fisioterapia pélvica</h2>
+      <p>A fisioterapia pélvica pode ajudar a aliviar a dor através de técnicas específicas e exercícios de fortalecimento.</p>`
   },
   {
     id: 'incontinencia-mitos',
@@ -63,7 +81,15 @@ const articles = [
     readTime: '4 min de leitura',
     author: 'Jéssica Godoi',
     image: '/images/blog/incontinencia-urinaria.webp',
-    category: 'Incontinência Urinária'
+    category: 'Incontinência Urinária',
+    content: `<p>A <strong>incontinência urinária</strong> é uma condição comum, mas cercada de mitos.</p>
+      <h2>Mitos e verdades</h2>
+      <ul>
+        <li>Mito: A incontinência é uma parte normal do envelhecimento.</li>
+        <li>Verdade: A incontinência pode ser tratada e prevenida.</li>
+      </ul>
+      <h2>Tratamento e prevenção</h2>
+      <p>A fisioterapia pélvica oferece tratamentos eficazes para a incontinência urinária, incluindo exercícios de fortalecimento e técnicas de controle da bexiga.</p>`
   },
   {
     id: 'endometriosis-management',
@@ -73,7 +99,16 @@ const articles = [
     readTime: '8 min de leitura',
     author: 'Jéssica Godoi',
     image: '/images/blog/endometriose.webp',
-    category: 'Saúde Pélvica'
+    category: 'Saúde Pélvica',
+    content: `<p>A <strong>endometriose</strong> é uma condição que afeta muitas mulheres, causando dor e desconforto.</p>
+      <h2>Sintomas e diagnóstico</h2>
+      <ul>
+        <li>Dor pélvica crônica</li>
+        <li>Menstruação irregular</li>
+        <li>Problemas de fertilidade</li>
+      </ul>
+      <h2>Tratamento com fisioterapia pélvica</h2>
+      <p>A fisioterapia pélvica pode ajudar a reduzir a dor e melhorar a qualidade de vida das mulheres com endometriose, através de técnicas específicas e exercícios.</p>`
   },
   {
     id: 'sitting-pelvic-health',
@@ -83,7 +118,16 @@ const articles = [
     readTime: '5 min de leitura',
     author: 'Jéssica Godoi',
     image: '/images/blog/postura-saude-pelvica.webp',
-    category: 'Dicas de Saúde'
+    category: 'Dicas de Saúde',
+    content: `<p>A <strong>postura</strong> correta é essencial para a saúde pélvica.</p>
+      <h2>Dicas para sentar corretamente</h2>
+      <ul>
+        <li>Mantenha os pés apoiados no chão</li>
+        <li>Evite cruzar as pernas</li>
+        <li>Use uma cadeira ergonômica</li>
+      </ul>
+      <h2>Exercícios para prevenir problemas</h2>
+      <p>Exercícios regulares de fortalecimento do assoalho pélvico podem ajudar a prevenir disfunções e melhorar a saúde pélvica.</p>`
   },
   {
     id: 'exercise-prolapse',
@@ -93,7 +137,16 @@ const articles = [
     readTime: '7 min de leitura',
     author: 'Jéssica Godoi',
     image: '/images/blog/exercicios-prolapso.webp',
-    category: 'Exercícios'
+    category: 'Exercícios',
+    content: `<p>Exercícios específicos podem ajudar a gerenciar o <strong>prolapso pélvico</strong>.</p>
+      <h2>Exercícios recomendados</h2>
+      <ul>
+        <li>Exercícios de Kegel</li>
+        <li>Yoga e pilates</li>
+        <li>Atividades de baixo impacto</li>
+      </ul>
+      <h2>Benefícios</h2>
+      <p>Esses exercícios fortalecem o assoalho pélvico, melhoram a postura e reduzem os sintomas do prolapso.</p>`
   },
   {
     id: 'breathing-pelvic-floor',
@@ -103,7 +156,15 @@ const articles = [
     readTime: '6 min de leitura',
     author: 'Jéssica Godoi',
     image: '/images/blog/respiracao-assoalho-pelvico.webp',
-    category: 'Exercícios'
+    category: 'Exercícios',
+    content: `<p>A <strong>respiração</strong> adequada é fundamental para a saúde do assoalho pélvico.</p>
+      <h2>Técnicas de respiração</h2>
+      <ul>
+        <li>Respiração diafragmática</li>
+        <li>Coordenação entre respiração e contração do assoalho pélvico</li>
+      </ul>
+      <h2>Benefícios</h2>
+      <p>Essas técnicas ajudam a fortalecer o assoalho pélvico e melhorar o controle sobre os músculos pélvicos.</p>`
   },
   {
     id: 'prolapso-pelvico-artigo',
@@ -113,7 +174,16 @@ const articles = [
     readTime: '7 min de leitura',
     author: 'Jéssica Godoi',
     image: 'https://images.pexels.com/photos/5853733/pexels-photo-5853733.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    category: 'Saúde Pélvica'
+    category: 'Saúde Pélvica',
+    content: `<p>O <strong>prolapso pélvico</strong> é uma condição que pode ser diagnosticada e tratada com sucesso.</p>
+      <h2>Diagnóstico e tratamento</h2>
+      <ul>
+        <li>Exames físicos e de imagem</li>
+        <li>Fisioterapia pélvica e exercícios</li>
+        <li>Cirurgia em casos graves</li>
+      </ul>
+      <h2>Prevenção</h2>
+      <p>Manter um peso saudável e praticar exercícios regulares são estratégias eficazes para prevenir o prolapso pélvico.</p>`
   },
   {
     id: 'sindrome-rokitansky',
@@ -123,7 +193,15 @@ const articles = [
     readTime: '6 min de leitura',
     author: 'Jéssica Godoi',
     image: '/images/blog/sindrome-rokitansky.webp',
-    category: 'Saúde Pélvica'
+    category: 'Saúde Pélvica',
+    content: `<p>A <strong>Síndrome de Rokitansky</strong> é uma condição rara que afeta o desenvolvimento do sistema reprodutivo feminino.</p>
+      <h2>Sintomas e diagnóstico</h2>
+      <ul>
+        <li>Ausência de menstruação</li>
+        <li>Problemas de fertilidade</li>
+      </ul>
+      <h2>Tratamento e qualidade de vida</h2>
+      <p>A fisioterapia pélvica pode ajudar a melhorar a qualidade de vida das mulheres com essa síndrome, através de técnicas específicas e apoio emocional.</p>`
   }
 ];
 
