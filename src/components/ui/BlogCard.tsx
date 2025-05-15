@@ -26,21 +26,6 @@ const BlogCard: React.FC<BlogCardProps> = ({
   return (
     <Link to={`/blog/${id}`} className="group">
       <article className="bg-white rounded-lg shadow-sm overflow-hidden transition-transform group-hover:shadow-md h-full flex flex-col">
-        {/* Container da imagem com proporção fixa 16:9 */}
-        <div className="relative w-full pt-[56.25%] bg-gray-100">
-          {image ? (
-            <img 
-              src={image} 
-              alt={title}
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          ) : (
-            <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-              <span className="text-gray-400">Imagem não disponível</span>
-            </div>
-          )}
-        </div>
-        
         <div className="p-6 flex-grow flex flex-col">
           <div className="flex items-center text-sm text-gray-500 mb-3">
             <Calendar className="w-4 h-4 mr-2" />
