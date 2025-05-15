@@ -3,14 +3,22 @@ import React from 'react';
 const PreloadResources = () => {
   return (
     <>
-      {/* Preload de fontes críticas */}
+      {/* Preload do CSS principal */}
       <link
+        rel="preload"
+        href="/src/index.css"
+        as="style"
+      />
+      <noscript><link rel="stylesheet" href="/src/index.css" /></noscript>
+
+      {/* Preload de fontes críticas (ajuste o caminho se necessário) */}
+      {/* <link
         rel="preload"
         href="/fonts/inter-var.woff2"
         as="font"
         type="font/woff2"
         crossOrigin="anonymous"
-      />
+      /> */}
       
       {/* Preload de imagens críticas */}
       <link
