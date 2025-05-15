@@ -26,9 +26,10 @@ const Hero = () => {
         
         <div className="relative z-10 container mx-auto px-4 pt-48 pb-20">
           <div className="text-center text-white mb-16">
-            <h1 className="text-4xl font-bold mb-6">
+          <h1 class="text-4xl font-bold mb-6" style="font-family: 'Inter', system-ui, sans-serif;">
               Fisioterapia Pélvica em Campinas
-            </h1>
+          </h1>
+
             <p className="text-lg mb-8 max-w-2xl mx-auto">
               Atendimento particular, personalizado e baseado em evidências. Sinta-se à vontade para cuidar de você.
             </p>
