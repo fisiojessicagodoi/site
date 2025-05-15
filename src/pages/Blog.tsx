@@ -16,8 +16,8 @@ const mainCategories = [
 const articles = [
   {
     id: 'fisioterapia-pelvica-campinas',
-    title: 'Fisioterapia Pélvica em Campinas: O que você precisa saber',
-    excerpt: 'Descubra como a fisioterapia pélvica pode transformar sua saúde e qualidade de vida em Campinas.',
+    title: 'Fisioterapia Pélvica em Campinas: Quando Procurar e Como Funciona',
+    excerpt: 'Descubra quando procurar a fisioterapia pélvica e como ela pode transformar sua saúde e qualidade de vida em Campinas.',
     date: '10 de junho de 2024',
     readTime: '6 min de leitura',
     author: 'Jéssica Godoi',
