@@ -63,7 +63,7 @@ const articles = [
     author: 'Jéssica Godoi',
     image: '/images/blog/dor-pelvica.webp',
     category: 'Saúde Pélvica',
-    content: `<p>A <strong>dor pélvica crônica</strong> pode ser causada por diversas condições, incluindo endometriose e síndrome do intestino irritável.</p>
+    content: `<p>A <strong>dor pélvica crônica</strong> pode ser causada por diversas condições, incluindo <strong>vaginismo</strong>, <strong>vulvodinia</strong> e <strong>dispareunia</strong>.</p>
       <h2>Causas e sintomas</h2>
       <ul>
         <li>Dor persistente na região pélvica</li>
@@ -71,7 +71,7 @@ const articles = [
         <li>Problemas urinários ou intestinais</li>
       </ul>
       <h2>Tratamento com fisioterapia pélvica</h2>
-      <p>A fisioterapia pélvica pode ajudar a aliviar a dor através de técnicas específicas e exercícios de fortalecimento.</p>`
+      <p>A fisioterapia pélvica pode ajudar a aliviar a dor através de técnicas específicas e exercícios de fortalecimento, adaptados às necessidades de cada paciente.</p>`
   },
   {
     id: 'incontinencia-mitos',
