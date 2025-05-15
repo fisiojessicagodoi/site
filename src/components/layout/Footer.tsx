@@ -18,14 +18,14 @@ const Footer: React.FC = () => {
               Fisioterapia pélvica especializada, focada em melhorar sua qualidade de vida através de tratamentos baseados em evidências, educação e planos de cuidado personalizados.
             </p>
             <div className="flex space-x-4 mt-6">
-              <a href="https://www.instagram.com/fisiojessicagodoi/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-terracota-100 transition-colors">
-                <Instagram size={20} />
+              <a href="https://www.instagram.com/fisiojessicagodoi/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-terracota-100 transition-colors" aria-label="Siga Jéssica Godoi no Instagram">
+                <Instagram size={20} aria-hidden="true" />
               </a>
-              <a href="https://www.facebook.com/fisiojessicagodoi/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-terracota-100 transition-colors">
-                <Facebook size={20} />
+              <a href="https://www.facebook.com/fisiojessicagodoi/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-terracota-100 transition-colors" aria-label="Siga Jéssica Godoi no Facebook">
+                <Facebook size={20} aria-hidden="true" />
               </a>
-              <a href="https://linkedin.com/in/jéssicaggodoi" target="_blank" rel="noopener noreferrer" className="text-white hover:text-terracota-100 transition-colors">
-                <Linkedin size={20} />
+              <a href="https://linkedin.com/in/jéssicaggodoi" target="_blank" rel="noopener noreferrer" className="text-white hover:text-terracota-100 transition-colors" aria-label="Conecte-se com Jéssica Godoi no LinkedIn">
+                <Linkedin size={20} aria-hidden="true" />
               </a>
             </div>
           </div>
