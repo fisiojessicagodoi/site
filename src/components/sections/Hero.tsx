@@ -27,7 +27,7 @@ const Hero = () => {
         
         <div className="relative z-20 container mx-auto px-4 pt-48 pb-20">
           <div className="text-center text-white mb-16">
-            <h1 className="text-4xl font-bold mb-6 text-white drop-shadow-lg" style={{ fontFamily: "'Inter', system-ui, sans-serif" }}>
+            <h1 className="text-4xl font-bold mb-6 text-white drop-shadow-lg">
               Fisioterapia Pélvica em Campinas
             </h1>
 
