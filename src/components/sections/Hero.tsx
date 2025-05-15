@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <>
       <PreloadResources />
-      <div className="relative min-h-screen bg-gradient-to-b from-terracota-900/95 to-coral-800/95">
+      <div className="relative min-h-screen bg-gradient-to-b from-terracota-900/95 to-terracota-900/95">
         {/* Background otimizado com overlay quente */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-terracota-900/60 z-10"></div>
