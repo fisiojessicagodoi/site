@@ -1,24 +1,19 @@
-import { StrictMode, Suspense, lazy } from 'react';
+import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
+import App from './App';
 import './index.css';
 
-// Componentes que podem ser carregados de forma lazy
-const App = lazy(() => import('./App.tsx'));
+const root = document.getElementById('root');
 
-// Componente de loading
-const LoadingFallback = () => (
-  <div className="flex items-center justify-center min-h-screen">
-    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
-  </div>
-);
+if (!root) {
+  throw new Error('Root element not found');
+}
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+createRoot(root).render(
+  <React.StrictMode>
     <BrowserRouter>
-      <Suspense fallback={<LoadingFallback />}>
-        <App />
-      </Suspense>
+      <App />
     </BrowserRouter>
-  </StrictMode>
+  </React.StrictMode>
 );
