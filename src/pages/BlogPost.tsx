@@ -50,23 +50,31 @@ const BlogPost: React.FC = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 bg-sand-to-coral text-white">
+      <section className="relative pt-32 pb-12 bg-terracota-800 text-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-4xl mx-auto">
-            <Link 
-              to="/blog" 
-              className="inline-flex items-center text-white hover:text-gray-200 mb-6"
-            >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Voltar para o blog
-            </Link>
-            <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6">{article.title}</h1>
-            <div className="flex items-center text-gray-600 space-x-4">
+          <div className="max-w-4xl mx-auto flex flex-col gap-6">
+            <div className="mb-4">
+              <Link 
+                to="/blog" 
+                className="inline-flex items-center text-white hover:text-gray-200 transition-colors"
+              >
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                <span className="font-medium">Voltar para o blog</span>
+              </Link>
+            </div>
+            <h1 className="font-serif text-3xl md:text-5xl font-bold mb-2 md:mb-4 break-words leading-tight">
+              {article.title}
+            </h1>
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-white/80 text-sm md:text-base">
               <span>{article.date}</span>
-              <span>•</span>
+              <span className="hidden md:inline">•</span>
               <span>{article.readTime}</span>
-              <span>•</span>
+              <span className="hidden md:inline">•</span>
               <span>{article.author}</span>
+              <span className="hidden md:inline">•</span>
+              <span className="bg-white/10 px-3 py-1 rounded-full text-xs md:text-sm">
+                {article.category}
+              </span>
             </div>
           </div>
         </div>
@@ -80,7 +88,14 @@ const BlogPost: React.FC = () => {
               {article.content ? (
                 <div dangerouslySetInnerHTML={{ __html: article.content }} />
               ) : (
-                <p className="text-gray-600">{article.excerpt}</p>
+                <div className="space-y-6">
+                  <p className="text-gray-600 text-lg">{article.excerpt}</p>
+                  <div className="bg-terracota-50 p-6 rounded-lg">
+                    <p className="text-gray-700">
+                      Este artigo está em desenvolvimento. Em breve você encontrará aqui um conteúdo completo e detalhado sobre este tema.
+                    </p>
+                  </div>
+                </div>
               )}
             </div>
 

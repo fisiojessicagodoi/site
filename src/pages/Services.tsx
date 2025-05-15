@@ -60,12 +60,12 @@ const Services: React.FC = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 bg-sand-to-coral text-white">
+      <section className="relative pt-32 pb-16 bg-terracota-800 text-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6">Serviços</h1>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Tratamentos abrangentes de fisioterapia pélvica adaptados às suas necessidades únicas
+            <p className="text-lg text-white leading-relaxed font-medium">
+              Tratamentos abrangentes de fisioterapia pélvica adaptados às suas necessidades únicas.
             </p>
           </div>
         </div>
@@ -108,7 +108,7 @@ const Services: React.FC = () => {
         <div className="container mx-auto px-4 md:px-6">
           <SectionTitle 
             subtitle="Minha Abordagem" 
-            title="Meu Processo de Tratamento"
+            title="Processo de Tratamento"
             centered 
           />
           

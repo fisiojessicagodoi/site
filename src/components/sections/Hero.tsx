@@ -36,11 +36,16 @@ const Hero = () => {
             </p>
             
             <div className="mt-8 mb-12">
-              <Link to="/contact" className="inline-block">
+              <Link 
+                to="/contact" 
+                className="inline-block p-2"
+                aria-label="Ir para página de contato"
+              >
                 <button 
                   className="inline-flex items-center justify-center font-medium rounded-full transition-all
-                           px-8 py-4 text-base text-terracota-900 bg-white hover:bg-white/90 
-                           shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                           px-10 py-5 text-lg text-terracota-900 bg-white hover:bg-white/90 
+                           shadow-lg hover:shadow-xl transform hover:-translate-y-0.5
+                           min-h-[56px] min-w-[200px]"
                   aria-label="Agendar consulta"
                 >
                   Agendar consulta

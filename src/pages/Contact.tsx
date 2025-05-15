@@ -6,11 +6,11 @@ const Contact: React.FC = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 bg-sand-to-coral text-white">
+      <section className="relative pt-32 pb-16 bg-terracota-800 text-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6">Contato</h1>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6">Entre em Contato</h1>
+            <p className="text-lg text-white leading-relaxed font-medium">
               Estou aqui para ajudar com todas as suas dúvidas e necessidades em saúde pélvica.
             </p>
           </div>

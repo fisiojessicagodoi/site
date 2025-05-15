@@ -27,30 +27,30 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-terracota-100 transition-colors"
-                aria-label="Instagram de Jéssica Godoi"
+                aria-label="Siga Jéssica Godoi no Instagram"
               >
-                <FaInstagram className="w-6 h-6" />
-                <span className="sr-only">Instagram</span>
+                <FaInstagram className="w-6 h-6" aria-hidden="true" />
+                <span className="sr-only">Siga Jéssica Godoi no Instagram</span>
               </a>
               <a
                 href="https://www.facebook.com/fisiojessicagodoi/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-terracota-100 transition-colors"
-                aria-label="Facebook de Jéssica Godoi"
+                aria-label="Siga Jéssica Godoi no Facebook"
               >
-                <FaFacebook className="w-6 h-6" />
-                <span className="sr-only">Facebook</span>
+                <FaFacebook className="w-6 h-6" aria-hidden="true" />
+                <span className="sr-only">Siga Jéssica Godoi no Facebook</span>
               </a>
               <a
                 href="https://linkedin.com/in/jéssicaggodoi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-terracota-100 transition-colors"
-                aria-label="LinkedIn de Jéssica Godoi"
+                aria-label="Conecte-se com Jéssica Godoi no LinkedIn"
               >
-                <FaLinkedin className="w-6 h-6" />
-                <span className="sr-only">LinkedIn</span>
+                <FaLinkedin className="w-6 h-6" aria-hidden="true" />
+                <span className="sr-only">Conecte-se com Jéssica Godoi no LinkedIn</span>
               </a>
             </div>
           </div>
