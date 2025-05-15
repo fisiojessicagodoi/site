@@ -1,0 +1,21 @@
+/* fonts.css */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300 700;
+  font-stretch: normal;
+  src: url('./Inter-VariableFont_slnt,wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400 700;
+  src: url('./Merriweather-Regular.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.2;
+  font-size: 2.5rem;
+}
