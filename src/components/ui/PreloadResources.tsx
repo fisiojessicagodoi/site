@@ -11,14 +11,18 @@ const PreloadResources = () => {
       />
       <noscript><link rel="stylesheet" href="/src/index.css" /></noscript>
 
-      {/* Preload de fontes críticas (ajuste o caminho se necessário) */}
-      {/* <link
+      {/* Preload de fontes críticas (Google Fonts) */}
+      <link
         rel="preload"
-        href="/fonts/inter-var.woff2"
-        as="font"
-        type="font/woff2"
-        crossOrigin="anonymous"
-      /> */}
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+        as="style"
+      />
+      <noscript>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+        />
+      </noscript>
       
       {/* Preload de imagens críticas */}
       <link
