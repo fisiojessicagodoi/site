@@ -17,8 +17,6 @@ const Contact: React.FC = () => {
         </div>
       </section>
 
-      {/* Contact Form & Info */}
-      <ContactSection />
 
       {/* Map Section */}
       <section className="py-16">
