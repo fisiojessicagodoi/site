@@ -156,7 +156,7 @@ const ArticleDetail: React.FC = () => {
 
     <p class="mt-6"><strong>Entre em contato:</strong> <a href="https://wa.link/32p5y9" target="_blank" class="text-terracota-700 underline">Falar pelo WhatsApp</a></p>
   `
-}
+},
     'prolapso-pelvico-artigo-2': {
       title: 'Prolapso Pélvico: Como Identificar, Prevenir e Tratar com Cuidado',
       date: '28 de maio de 2025',
