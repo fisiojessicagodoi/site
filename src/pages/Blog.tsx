@@ -92,7 +92,7 @@ const articles = [
       <p>A fisioterapia pélvica oferece tratamentos eficazes para a incontinência urinária, incluindo exercícios de fortalecimento e técnicas de controle da bexiga.</p>`
   },
   {
-    id: 'endometriosis-management',
+    id: 'tratamento-endometriose',
     title: 'Endometriose: Como a Fisioterapia Pélvica Pode Ajudar no Tratamento',
     excerpt: 'Descubra como a fisioterapia pélvica especializada complementa o tratamento da endometriose, reduz a dor e melhora a qualidade de vida. Atendimento em Campinas.',
     date: '17 de março de 2025',
@@ -165,6 +165,32 @@ const articles = [
       </ul>
       <h2>Benefícios</h2>
       <p>Essas técnicas ajudam a fortalecer o assoalho pélvico e melhorar o controle sobre os músculos pélvicos.</p>`
+  },
+  {
+    id: 'exercicios-assoalho-pelvico',
+    title: 'Exercícios para o Assoalho Pélvico: o que são, quando fazer e a importância da avaliação individualizada',
+    excerpt: 'Entenda como os exercícios para o assoalho pélvico podem melhorar sua qualidade de vida, quando eles são indicados e por que a avaliação profissional é essencial.',
+    date: '10 de junho de 2025',
+    readTime: '6 min de leitura',
+    author: 'Jéssica Godoi',
+    image: '/images/blog/exercicios-assoalho-pelvico.webp',
+    category: 'Exercícios',
+    content: `
+      <p>Os <strong>exercícios para o assoalho pélvico</strong> são indicados para melhorar a força, coordenação e consciência dos músculos da pelve, ajudando na saúde urinária, sexual e no bem-estar geral.</p>
+      
+      <h2>Quando eles são indicados?</h2>
+      <ul>
+        <li>Incontinência urinária</li>
+        <li>Prolapso pélvico</li>
+        <li>Dor nas relações</li>
+        <li>Preparação ou recuperação do parto</li>
+      </ul>
+      
+      <h2>Precisa de avaliação?</h2>
+      <p>Sim! Nem todo mundo precisa fortalecer. Algumas pessoas precisam relaxar ou melhorar a coordenação. A avaliação com uma fisioterapeuta pélvica define o melhor caminho para cada caso.</p>
+      
+      <p>Quer saber se esses exercícios são para você? <a href="https://wa.link/32p5y9" class="text-terracota-600 underline">Agende uma avaliação</a> e comece com segurança.</p>
+    `
   },
   {
     id: 'prolapso-pelvico-artigo',
