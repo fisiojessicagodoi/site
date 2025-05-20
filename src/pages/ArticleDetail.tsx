@@ -26,7 +26,7 @@ const ArticleDetail: React.FC = () => {
           <li>Melhora da função sexual e do prazer</li>
           <li>Mais estabilidade para a coluna e o quadril</li>
         </ul>
-        <img src="/images/assoalho-pelvico-exercicios.jpg" alt="Exercícios para o assoalho pélvico" class="rounded-lg shadow-md my-6 mx-auto" style="max-width: 400px;" />
+        <img src="images/blog/exercicios-assoalho-pelvico.webp" alt="Exercícios para o assoalho pélvico" class="rounded-lg shadow-md my-6 mx-auto" style="max-width: 400px;" />
         <h3 class="text-terracota-800 font-semibold mt-6">Como Identificar os Músculos do Assoalho Pélvico?</h3>
         <ul class="list-disc pl-6 text-gray-700">
           <li>Imagine que precisa segurar o xixi ou evitar a saída de gases</li>
@@ -41,7 +41,7 @@ const ArticleDetail: React.FC = () => {
           <li><strong>Contrações rápidas:</strong> Contraia e relaxe rapidamente 10 vezes seguidas, 2-3 séries ao dia.</li>
           <li><strong>Exercício do elevador:</strong> Imagine subir andares com a contração, aumentando a força gradualmente e depois descendo devagar.</li>
         </ul>
-        <img src="/images/exercicios-assoalho-pelvico.jpg" alt="Demonstração de exercícios" class="rounded-lg shadow-md my-6 mx-auto" style="max-width: 400px;" />
+        <img src="images/blog/exercicios-assoalho-pelvico.webp" alt="Demonstração de exercícios" class="rounded-lg shadow-md my-6 mx-auto" style="max-width: 400px;" />
         <div class="bg-terracota-100 border-l-4 border-terracota-600 p-4 my-6 rounded">
           <strong class="text-terracota-800">Importante:</strong> A regularidade é fundamental! Associe os exercícios a hábitos diários, como escovar os dentes ou esperar o café.</div>
         <h3 class="text-terracota-800 font-semibold mt-6">Quando Procurar Ajuda Profissional?</h3>
@@ -115,7 +115,7 @@ const ArticleDetail: React.FC = () => {
   date: '19 de maio de 2025',
   readTime: '5 min de leitura',
   author: 'Jéssica Godoi',
-  image: '',
+  image: '/images/blog/exercicios-assoalho-pelvico.webp',
   category: 'Saúde Feminina',
   content: `
     <h2 class="text-terracota-700 font-bold">O que é o assoalho pélvico?</h2>
@@ -154,7 +154,15 @@ const ArticleDetail: React.FC = () => {
       <span class="text-gray-700">Se você sente desconforto, dor, perda de urina ou deseja cuidar da sua saúde íntima de forma preventiva, agende uma avaliação individualizada. O cuidado com o seu assoalho pélvico pode transformar sua relação com o próprio corpo e sua qualidade de vida.</span>
     </div>
 
-    <p class="mt-6"><strong>Entre em contato:</strong> <a href="https://wa.link/32p5y9" target="_blank" class="text-terracota-700 underline">Falar pelo WhatsApp</a></p>
+    <div class="mt-12 text-center">
+  <p class="text-gray-600 mb-6">Ainda tem dúvidas? Ficarei feliz em ajudar.</p>
+  <a href="https://wa.link/32p5y9" target="_blank" rel="noopener noreferrer">
+    <button class="bg-terracota-600 hover:bg-terracota-700 text-white text-lg font-semibold py-3 px-6 rounded-lg transition duration-300">
+      Entre em Contato
+    </button>
+  </a>
+</div>
+
   `
 },
     'prolapso-pelvico-artigo-2': {
