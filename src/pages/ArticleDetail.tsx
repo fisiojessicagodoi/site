@@ -132,7 +132,10 @@ const ArticleDetail: React.FC = () => {
 </ul>
 
 <h2 class="text-terracota-700 font-bold mt-6">Por que você não deve fazer esses exercícios sozinha?</h2>
-<p>Apesar de parecerem simples, os exercícios para o assoalho pélvico exigem conhecimento sobre o funcionamento do seu corpo. Mais de 50% das mulheres não conseguem contrair corretamente essa musculatura sem orientação — o que pode levar a compensações com abdômen ou glúteos, sem benefício real para a pelve.</p>
+<p>Apesar de parecerem simples, os exercícios para o assoalho pélvico exigem conhecimento sobre o funcionamento do seu corpo.</p>
+<div class="bg-terracota-100 border-l-4 border-terracota-600 p-4 my-6 rounded">
+  <span class="text-gray-700">Mais de 50% das mulheres não conseguem contrair corretamente essa musculatura sem orientação — o que pode levar a compensações com abdômen ou glúteos, sem benefício real para a pelve.</span>
+</div>
 <p>Além disso, <strong>nem sempre o problema é fraqueza</strong>. Em muitos casos, o que existe é <strong>tensão excessiva (hipertonia)</strong>. Nesses quadros, fazer contrações pode piorar sintomas como dor ou escapes.</p>
 <p>Por isso, a orientação de uma fisioterapeuta especializada é fundamental.</p>
 
