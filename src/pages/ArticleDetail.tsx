@@ -146,7 +146,7 @@ const ArticleDetail: React.FC = () => {
 </ul>
 
 <h2 class="text-terracota-700 font-bold mt-6">Avaliação individualizada: o ponto de partida</h2>
-<p>A única maneira segura de saber o que seu assoalho pélvico precisa é com uma avaliação fisioterapêutica. É ela que vai definir se o melhor caminho é fortalecer, relaxar, coordenar — ou uma combinação desses recursos.</p>
+<p>A única maneira segura de saber o que seu assoalho pélvico precisa é com uma avaliação fisioterapeuta. É ela que vai definir se o melhor caminho é fortalecer, relaxar, coordenar — ou uma combinação desses recursos.</p>
 <p>Cada mulher tem uma história e um corpo únicos. A avaliação garante que você inicie um tratamento personalizado, eficaz e seguro.</p>
 
 <div class="bg-terracota-100 border-l-4 border-terracota-600 p-4 my-6 rounded">
@@ -170,7 +170,7 @@ const ArticleDetail: React.FC = () => {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #9b4a46;
+    background-color: #f4e2df; /* tom terracota claro */
     color: white;
     padding: 12px 20px;
     font-weight: 600;
@@ -187,9 +187,8 @@ const ArticleDetail: React.FC = () => {
   }
 </style>
 <a href="https://wa.link/32p5y9" target="_blank" rel="noopener noreferrer" class="floating-button">
-  Avalie seu assoalho pélvico 💬
+  Comece com uma avaliação individualizada
 </a>
-
   `
 },
     'prolapso-pelvico-artigo-2': {
