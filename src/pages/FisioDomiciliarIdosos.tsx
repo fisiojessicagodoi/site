@@ -83,10 +83,10 @@ export default function FisioDomiciliarIdosos() {
 
         {/* Lateral direita com imagens */}
         <div className="space-y-6">
-          <img
-            src="/src/assets/profile.webp"
-            alt="Jéssica Godoi"
-            className="w-full rounded-2xl shadow-md"
+        <img 
+                src={profileImg} 
+                alt="Foto de perfil da Dra. Jéssica Godoi" 
+                className="object-cover w-full h-full rounded-lg"
 
           />
         </div>
