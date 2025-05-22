@@ -8,8 +8,6 @@ import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import ArticleDetail from './pages/ArticleDetail';
 import ServiceDetail from './pages/ServiceDetail';
-import FisioDomiciliarIdosos from "./pages/FisioDomiciliarIdosos"; // ajuste o caminho se necessário
-
 
 function App() {
   return (
@@ -22,7 +20,6 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<ArticleDetail />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/fisioterapia-idoso" element={<FisioDomiciliarIdosos />} />
       </Routes>
     </Layout>
   );
