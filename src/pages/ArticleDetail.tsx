@@ -118,43 +118,43 @@ const ArticleDetail: React.FC = () => {
   image: '/images/blog/exercicios-assoalho-pelvico.webp',
   category: 'Saúde Feminina',
   content: `
-    <h2 class="text-terracota-700 font-bold">O que é o assoalho pélvico?</h2>
-    <p>O assoalho pélvico é um conjunto de músculos e tecidos localizados na base da pelve. Ele tem funções importantes como sustentar os órgãos pélvicos (bexiga, útero e reto), auxiliar no controle da urina e das fezes, além de contribuir para a função sexual.</p>
+<h2 class="text-terracota-700 font-bold">O que é o assoalho pélvico?</h2>
+<p>O assoalho pélvico é um conjunto de músculos e tecidos localizados na base da pelve. Ele é responsável por funções essenciais como sustentar os órgãos pélvicos (bexiga, útero e reto), controlar a urina e as fezes, além de atuar na função sexual e na estabilidade do core.</p>
 
-    <h2 class="text-terracota-700 font-bold mt-6">Por que fazer exercícios para o assoalho pélvico?</h2>
-    <p>Assim como qualquer outro músculo do corpo, os músculos do assoalho pélvico também podem enfraquecer. Isso pode acontecer por diversos motivos, como gravidez, parto, envelhecimento, cirurgias ou mesmo maus hábitos posturais e respiratórios.</p>
-    <p>Quando bem orientados, os exercícios podem:</p>
-    <ul class="list-disc pl-6 text-terracota-600">
-      <li>Melhorar ou eliminar escapes de urina (incontinência urinária);</li>
-      <li>Reduzir dores na região pélvica ou na relação sexual;</li>
-      <li>Prevenir e tratar prolapsos (queda de órgãos);</li>
-      <li>Contribuir para maior prazer sexual e bem-estar geral.</li>
-    </ul>
+<h2 class="text-terracota-700 font-bold mt-6">Exercícios para o assoalho pélvico: o que são e para que servem?</h2>
+<p>Esses exercícios envolvem o controle — tanto de ativação quanto de relaxamento — da musculatura pélvica. São indicados para mulheres com disfunções como:</p>
+<ul class="list-disc pl-6 text-terracota-600">
+  <li>Escapes de urina ou fezes (incontinência);</li>
+  <li>Dor na relação sexual ou dor pélvica crônica;</li>
+  <li>Prolapsos (queda de órgãos);</li>
+  <li>Recuperação pós-parto ou pós-cirúrgica;</li>
+  <li>Desequilíbrios causados por exercícios de impacto ou alterações hormonais.</li>
+</ul>
 
-    <h2 class="text-terracota-700 font-bold mt-6">Em quais situações eles são indicados?</h2>
-    <p>Os exercícios são amplamente recomendados em casos como:</p>
-    <ul class="list-disc pl-6 text-terracota-600">
-      <li>Pós-parto, como parte da reabilitação perineal;</li>
-      <li>Incontinência urinária ou fecal;</li>
-      <li>Dor pélvica crônica ou dor durante a relação;</li>
-      <li>Pré e pós-menopausa, para prevenção de sintomas;</li>
-      <li>Prevenção para mulheres que praticam atividades físicas de impacto.</li>
-    </ul>
+<h2 class="text-terracota-700 font-bold mt-6">Por que você não deve fazer esses exercícios sozinha?</h2>
+<p>Apesar de parecerem simples, os exercícios para o assoalho pélvico exigem conhecimento sobre o funcionamento do seu corpo. Mais de 50% das mulheres não conseguem contrair corretamente essa musculatura sem orientação — o que pode levar a compensações com abdômen ou glúteos, sem benefício real para a pelve.</p>
+<p>Além disso, <strong>nem sempre o problema é fraqueza</strong>. Em muitos casos, o que existe é <strong>tensão excessiva (hipertonia)</strong>. Nesses quadros, fazer contrações pode piorar sintomas como dor ou escapes.</p>
+<p>Por isso, a orientação de uma fisioterapeuta especializada é fundamental.</p>
 
-    <h2 class="text-terracota-700 font-bold mt-6">Quando não devem ser feitos?</h2>
-    <p>Apesar de serem muito benéficos, os exercícios para o assoalho pélvico não são indicados de forma generalizada. Em alguns casos, como dores agudas sem diagnóstico, infecções locais, aumento da tensão muscular (hipertonia) ou alterações neurológicas, é necessário cautela e adaptação.</p>
-    <p>Por isso, é fundamental que a realização dos exercícios seja orientada por uma fisioterapeuta especializada.</p>
+<h2 class="text-terracota-700 font-bold mt-6">Quando os exercícios são contraindicados?</h2>
+<p>Há situações em que os exercícios devem ser adaptados ou evitados temporariamente, como:</p>
+<ul class="list-disc pl-6 text-terracota-600">
+  <li>Infecções locais ou feridas;</li>
+  <li>Presença de dor aguda ou sem diagnóstico;</li>
+  <li>Alterações neurológicas específicas;</li>
+  <li>Hipertonia muscular significativa sem liberação prévia.</li>
+</ul>
 
-    <h2 class="text-terracota-700 font-bold mt-6">Por que a avaliação individualizada é essencial?</h2>
-    <p>Cada mulher possui um histórico e uma condição corporal única. A avaliação fisioterapêutica permite identificar o funcionamento do assoalho pélvico, a presença de disfunções, além de definir quais exercícios são seguros e eficazes para o seu caso específico.</p>
-    <p>Em alguns casos, a primeira etapa do tratamento pode ser relaxar e não fortalecer, e isso só pode ser identificado com uma boa avaliação clínica.</p>
+<h2 class="text-terracota-700 font-bold mt-6">Avaliação individualizada: o ponto de partida</h2>
+<p>A única maneira segura de saber o que seu assoalho pélvico precisa é com uma avaliação fisioterapêutica. É ela que vai definir se o melhor caminho é fortalecer, relaxar, coordenar — ou uma combinação desses recursos.</p>
+<p>Cada mulher tem uma história e um corpo únicos. A avaliação garante que você inicie um tratamento personalizado, eficaz e seguro.</p>
 
-    <div class="bg-terracota-100 border-l-4 border-terracota-600 p-4 my-6 rounded">
-      <strong class="text-terracota-800">Agende sua avaliação</strong><br/>
-      <span class="text-gray-700">Se você sente desconforto, dor, perda de urina ou deseja cuidar da sua saúde íntima de forma preventiva, agende uma avaliação individualizada. O cuidado com o seu assoalho pélvico pode transformar sua relação com o próprio corpo e sua qualidade de vida.</span>
-    </div>
+<div class="bg-terracota-100 border-l-4 border-terracota-600 p-4 my-6 rounded">
+  <strong class="text-terracota-800">Agende sua avaliação</strong><br/>
+  <span class="text-gray-700">Se você sente escapes de urina, desconfortos, dor ou quer cuidar da sua saúde íntima de forma preventiva, agende uma avaliação individualizada. Cuidar do seu assoalho pélvico pode transformar sua qualidade de vida.</span>
+</div>
 
-    <div class="mt-12 text-center">
+<div class="mt-12 text-center">
   <p class="text-gray-600 mb-6">Ainda tem dúvidas? Ficarei feliz em ajudar.</p>
   <a href="https://wa.link/32p5y9" target="_blank" rel="noopener noreferrer">
     <button class="bg-terracota-600 hover:bg-terracota-700 text-white text-lg font-semibold py-3 px-6 rounded-lg transition duration-300">
@@ -162,6 +162,33 @@ const ArticleDetail: React.FC = () => {
     </button>
   </a>
 </div>
+
+<!-- Botão flutuante com chamada -->
+<style>
+  .floating-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #9b4a46;
+    color: white;
+    padding: 12px 20px;
+    font-weight: 600;
+    border-radius: 9999px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 9999;
+    font-size: 0.9rem;
+    display: none;
+  }
+  @media (max-width: 768px) {
+    .floating-button {
+      display: block;
+    }
+  }
+</style>
+<a href="https://wa.link/32p5y9" target="_blank" rel="noopener noreferrer" class="floating-button">
+  Avalie seu assoalho pélvico 💬
+</a>
 
   `
 },
