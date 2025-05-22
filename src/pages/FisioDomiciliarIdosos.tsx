@@ -10,13 +10,17 @@ export default function FisioDomiciliarIdosos() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-[#3A3A3A] font-sans">
-      {/* Hero visual para contraste e espaçamento */}
-      <div className="w-full h-48 bg-gradient-to-r from-[#f1f5f9] to-[#e2e8f0] flex items-center justify-center">
-        <h1 className="text-3xl md:text-4xl font-bold text-[#3A3A3A] px-4 text-center">
-          Mais segurança e qualidade de vida para quem você ama, sem sair de casa.
-        </h1>
+    <div>
+    {/* Hero Section */}
+    <section className="relative pt-32 pb-16 bg-terracota-800 text-white">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6">Fisioterapia Domiciliar para Idosos</h1>
+          <p className="text-lg text-white leading-relaxed font-medium">
+          Mais segurança e qualidade de vida para quem você ama, sem sair de casa.          </p>
+        </div>
       </div>
+    </section>
 
       <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
         {/* Conteúdo principal */}
