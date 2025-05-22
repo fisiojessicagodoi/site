@@ -2,7 +2,7 @@ import React from "react";
 
 export default function FisioDomiciliarIdosos() {
   return (
-    <div className="min-h-screen bg-[#F8F9FA] text-[#2B4C7E] font-sans">
+    <div className="min-h-screen bg-[#F8F9FA] text-[#2B4C7E] font-sans pt-20">
       <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
         {/* Conteúdo principal */}
         <div className="md:col-span-2">
@@ -47,7 +47,7 @@ export default function FisioDomiciliarIdosos() {
             <h2 className="text-2xl font-semibold mb-2 text-[#2B4C7E]">
               Atendimento em:
             </h2>
-            <p className="text-[#3E556E]">Campinas – Cambuí e bairros próximos</p>
+            <p className="text-[#3E556E]">Campinas – Cambuí e Sousas</p>
           </div>
 
           <div className="text-center mt-10">
@@ -65,7 +65,7 @@ export default function FisioDomiciliarIdosos() {
         {/* Lateral direita com imagens */}
         <div className="space-y-6">
           <img
-            src="/src/assets/foto-jessica.png" // Substitua pelo caminho correto da sua foto
+            src="/src/assets/profile.webp" // Substitua pelo caminho correto da sua foto
             alt="Jéssica Godoi"
             className="w-full rounded-2xl shadow-md"
           />
