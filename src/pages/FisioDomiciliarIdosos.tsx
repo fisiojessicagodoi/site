@@ -10,13 +10,17 @@ export default function FisioDomiciliarIdosos() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-[#3A3A3A] font-sans pt-20">
+    <div className="min-h-screen bg-white text-[#3A3A3A] font-sans">
+      {/* Hero visual para contraste e espaçamento */}
+      <div className="w-full h-48 bg-gradient-to-r from-[#f1f5f9] to-[#e2e8f0] flex items-center justify-center">
+        <h1 className="text-3xl md:text-4xl font-bold text-[#3A3A3A] px-4 text-center">
+          Mais segurança e qualidade de vida para quem você ama, sem sair de casa.
+        </h1>
+      </div>
+
       <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
         {/* Conteúdo principal */}
         <div className="md:col-span-2">
-          <h1 className="text-3xl md:text-4xl font-bold text-[#3A3A3A] mb-4">
-            Mais segurança e qualidade de vida para quem você ama, sem sair de casa.
-          </h1>
           <p className="text-lg text-[#555] mb-8">
             Atendimento de fisioterapia domiciliar especializado para idosos em Campinas e região.
           </p>
@@ -79,18 +83,7 @@ export default function FisioDomiciliarIdosos() {
             src="/src/assets/profile.webp"
             alt="Jéssica Godoi"
             className="w-full rounded-2xl shadow-md"
-          />
 
-          <img
-            src="/src/assets/fisio-idoso-1.jpg"
-            alt="Fisioterapia com idoso"
-            className="w-full rounded-2xl shadow-md"
-          />
-
-          <img
-            src="/src/assets/fisio-idoso-2.jpg"
-            alt="Idoso recebendo cuidados"
-            className="w-full rounded-2xl shadow-md"
           />
         </div>
       </div>
