@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import WhatsAppButton from '../ui/WhatsAppButton';
-import FloatingButton from '../ui/FloatingEvaluationButton';
+import FloatingEvaluationButton from '../ui/FloatingEvaluationButton';
 
 interface LayoutProps {
   children: React.ReactNode;
