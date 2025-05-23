@@ -3,12 +3,11 @@ import React, { useEffect } from "react";
 // If FisioDomiciliarIdosos.tsx is in 'src/pages/' and profile.webp is in 'src/assets/',
 // then '../assets/profile.webp' is correct.
 import profileImg from '../assets/profile.webp';
+import { Home, UserCheck, ShieldCheck, TrendingUp, ThumbsUp, Users, ClipboardList, Target, Bike, Lightbulb, Repeat, AlertTriangle, Accessibility, Activity, Stethoscope, Clock, FileWarning, Footprints, Wind, HeartPulse, SmilePlus, MapPin } from 'lucide-react';
 
 export default function FisioDomiciliarIdosos() {
   // This useEffect hook attempts to hide a floating button with id 'botao-avaliacao-flutuante'
   // when the component mounts and show it again when the component unmounts.
-  // Note: This is direct DOM manipulation and might be better handled via React state
-  // if 'botao-avaliacao-flutuante' is part of the React application.
   useEffect(() => {
     const botaoFlutuante = document.querySelector("#botao-avaliacao-flutuante");
     if (botaoFlutuante) {
@@ -21,11 +20,18 @@ export default function FisioDomiciliarIdosos() {
     };
   }, []); // Empty dependency array means this effect runs once on mount and cleanup on unmount
 
+  // Helper component for list items with icons
+  const ListItemWithIcon = ({ icon: Icon, text, boldText }) => (
+    <li className="flex items-start space-x-3">
+      <Icon className="flex-shrink-0 h-6 w-6 text-[#E87A5B]" aria-hidden="true" />
+      <span>{boldText && <strong>{boldText}:</strong>} {text}</span>
+    </li>
+  );
+
   return (
-    <div>
+    <div className="bg-white"> {/* Added a default background for the whole page */}
       {/* Hero Section */}
-      {/* This section serves as the main banner of the page. */}
-      <section className="relative pt-32 pb-16 bg-terracota-800 text-white"> {/* Assuming terracota-800 is your primary dark terracotta color */}
+      <section className="relative pt-32 pb-16 bg-terracota-800 text-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6">Fisioterapia Domiciliar para Idosos</h1>
@@ -40,155 +46,153 @@ export default function FisioDomiciliarIdosos() {
       <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
         {/* Left column: Text content */}
         <div className="md:col-span-2">
-          <p className="text-lg text-[#555] mb-8">
+          <p className="text-lg text-[#555] mb-12 text-center md:text-left"> {/* Increased bottom margin and centered on mobile */}
             Atendimento de fisioterapia domiciliar especializado para idosos em Campinas e região.
           </p>
 
-          {/* "Para quem é indicado?" section with updated colors */}
-          <div className="bg-[#FAE5DE] rounded-2xl p-6 mb-10 shadow-md"> {/* Light terracotta background */}
-            <h2 className="text-2xl font-semibold mb-4 text-[#9A6A59]"> {/* Darker terracotta text for title */}
-              Para quem é indicado?
+          {/* "Para quem é indicado?" section */}
+          <div className="bg-[#FAE5DE] rounded-2xl p-6 md:p-8 mb-12 shadow-lg"> {/* Increased padding and shadow */}
+            <h2 className="text-3xl font-semibold mb-6 text-[#9A6A59] flex items-center">
+              <SmilePlus className="h-8 w-8 mr-3 text-[#E87A5B]" /> Para quem é indicado?
             </h2>
-            <ul className="list-disc pl-6 space-y-2 text-[#9A6A59]"> {/* Darker terracotta text for list items */}
-              <li>Idosos com dificuldade para andar, levantar ou manter o equilíbrio</li>
-              <li>Histórico de quedas ou medo de cair</li>
-              <li>Recuperação pós-cirurgia ou internação</li>
-              <li>Doenças como Parkinson, Alzheimer ou AVC</li>
-              <li>Dores ou limitações nas atividades do dia a dia</li>
-              <li>Necessidade de fortalecimento muscular e coordenação</li>
-              <li>Isolamento social ou necessidade de atenção contínua</li>
+            <ul className="space-y-3 text-[#9A6A59]">
+              <ListItemWithIcon icon={Accessibility} text="Idosos com dificuldade para andar, levantar ou manter o equilíbrio" />
+              <ListItemWithIcon icon={AlertTriangle} text="Histórico de quedas ou medo de cair" />
+              <ListItemWithIcon icon={HeartPulse} text="Recuperação pós-cirurgia ou internação" />
+              <ListItemWithIcon icon={Activity} text="Doenças como Parkinson, Alzheimer ou AVC" />
+              <ListItemWithIcon icon={Stethoscope} text="Dores ou limitações nas atividades do dia a dia" />
+              <ListItemWithIcon icon={Bike} text="Necessidade de fortalecimento muscular e coordenação" />
+              <ListItemWithIcon icon={Users} text="Isolamento social ou necessidade de atenção contínua" />
             </ul>
           </div>
 
           {/* "Por que é importante?" section */}
-          <div className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4 text-[#3A3A3A]">
+          <div className="mb-12">
+            <h2 className="text-3xl font-semibold mb-6 text-[#3A3A3A]">
               Por que é importante?
             </h2>
-            <p className="text-[#555] mb-4">
+            <p className="text-lg text-[#555] leading-relaxed mb-4"> {/* Increased font size and line height */}
               Com o envelhecimento, é comum haver perda de força, equilíbrio e agilidade. A fisioterapia domiciliar ajuda a prevenir quedas, melhorar a mobilidade e manter o idoso mais independente e ativo dentro da sua própria casa — com toda a atenção que ele merece.
             </p>
           </div>
 
-          {/* NEW SECTION: Benefícios Detalhados */}
-          <div className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4 text-[#3A3A3A]">
+          {/* SECTION: Benefícios Detalhados */}
+          <div className="mb-12">
+            <h2 className="text-3xl font-semibold mb-6 text-[#3A3A3A]">
               Benefícios Detalhados da Fisioterapia Domiciliar
             </h2>
-            <ul className="list-disc pl-6 space-y-3 text-[#555]">
-              <li>
-                <strong>Conforto e Segurança do Lar:</strong> Tratamento no ambiente familiar, reduzindo o estresse e os riscos de deslocamento.
-              </li>
-              <li>
-                <strong>Atendimento Personalizado:</strong> Foco total nas necessidades individuais do paciente, com um plano de tratamento exclusivo.
-              </li>
-              <li>
-                <strong>Prevenção de Quedas:</strong> Exercícios específicos para fortalecimento e equilíbrio, adaptados ao ambiente doméstico.
-              </li>
-              <li>
-                <strong>Recuperação Acelerada:</strong> Ideal para pós-operatórios ou após longos períodos de internação, promovendo uma reabilitação mais rápida.
-              </li>
-              <li>
-                <strong>Maior Adesão ao Tratamento:</strong> A comodidade do atendimento em casa facilita a continuidade e o engajamento do paciente.
-              </li>
-              <li>
-                <strong>Envolvimento Familiar:</strong> Permite que familiares acompanhem de perto e participem ativamente do processo de recuperação.
-              </li>
-            </ul>
+            <div className="md:flex md:space-x-6 items-center">
+              <div className="md:w-2/3">
+                <ul className="space-y-4 text-[#555]">
+                  <ListItemWithIcon icon={Home} boldText="Conforto e Segurança do Lar" text="Tratamento no ambiente familiar, reduzindo o estresse e os riscos de deslocamento." />
+                  <ListItemWithIcon icon={UserCheck} boldText="Atendimento Personalizado" text="Foco total nas necessidades individuais do paciente, com um plano de tratamento exclusivo." />
+                  <ListItemWithIcon icon={ShieldCheck} boldText="Prevenção de Quedas" text="Exercícios específicos para fortalecimento e equilíbrio, adaptados ao ambiente doméstico." />
+                  <ListItemWithIcon icon={TrendingUp} boldText="Recuperação Acelerada" text="Ideal para pós-operatórios ou após longos períodos de internação, promovendo uma reabilitação mais rápida." />
+                  <ListItemWithIcon icon={ThumbsUp} boldText="Maior Adesão ao Tratamento" text="A comodidade do atendimento em casa facilita a continuidade e o engajamento do paciente." />
+                  <ListItemWithIcon icon={Users} boldText="Envolvimento Familiar" text="Permite que familiares acompanhem de perto e participem ativamente do processo de recuperação." />
+                </ul>
+              </div>
+              <div className="md:w-1/3 mt-6 md:mt-0">
+                <img 
+                  src="https://placehold.co/300x400/FAE5DE/9A6A59?text=Conforto+do+Lar" 
+                  alt="Imagem ilustrativa do conforto do lar para fisioterapia" 
+                  className="rounded-lg shadow-md w-full h-auto object-cover"
+                  onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/300x400/EEEEEE/777777?text=Imagem+Indisponível"; }}
+                />
+                 <p className="text-sm text-gray-500 mt-2 text-center">Fisioterapia no conforto e segurança do seu lar.</p>
+              </div>
+            </div>
           </div>
 
-          {/* NEW SECTION: Como Funciona uma Sessão Típica? */}
-          <div className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4 text-[#3A3A3A]">
+          {/* SECTION: Como Funciona uma Sessão Típica? */}
+          <div className="mb-12">
+            <h2 className="text-3xl font-semibold mb-6 text-[#3A3A3A]">
               Como Funciona uma Sessão Típica?
             </h2>
-            <p className="text-[#555] mb-2">
+            <p className="text-lg text-[#555] leading-relaxed mb-4">
               Cada sessão é cuidadosamente planejada para atender às suas necessidades específicas, mas geralmente seguimos alguns passos:
             </p>
-            <ol className="list-decimal pl-6 space-y-3 text-[#555]">
-              <li>
-                <strong>Avaliação Inicial Completa:</strong> Na primeira consulta, realizo uma anamnese detalhada, avalio sua mobilidade, força, equilíbrio e identifico suas principais queixas e objetivos.
-              </li>
-              <li>
-                <strong>Plano de Tratamento Individualizado:</strong> Com base na avaliação, elaboramos juntos um plano de tratamento com metas realistas e focadas na sua melhora funcional.
-              </li>
-              <li>
-                <strong>Exercícios Terapêuticos:</strong> Realizamos exercícios de fortalecimento, alongamento, equilíbrio, coordenação e treino de marcha, utilizando técnicas e recursos adequados.
-              </li>
-              <li>
-                <strong>Orientações e Adaptações:</strong> Forneço orientações para o dia a dia e sugestões de adaptações no ambiente doméstico para maior segurança e independência.
-              </li>
-              <li>
-                <strong>Reavaliação Contínua:</strong> Acompanho sua evolução de perto, ajustando o plano de tratamento conforme necessário para garantir os melhores resultados.
-              </li>
+            <ol className="space-y-4 text-[#555]">
+              <ListItemWithIcon icon={ClipboardList} boldText="Avaliação Inicial Completa" text="Na primeira consulta, realizo uma anamnese detalhada, avalio sua mobilidade, força, equilíbrio e identifico suas principais queixas e objetivos." />
+              <ListItemWithIcon icon={Target} boldText="Plano de Tratamento Individualizado" text="Com base na avaliação, elaboramos juntos um plano de tratamento com metas realistas e focadas na sua melhora funcional." />
+              <ListItemWithIcon icon={Bike} boldText="Exercícios Terapêuticos" text="Realizamos exercícios de fortalecimento, alongamento, equilíbrio, coordenação e treino de marcha, utilizando técnicas e recursos adequados." />
+              <ListItemWithIcon icon={Lightbulb} boldText="Orientações e Adaptações" text="Forneço orientações para o dia a dia e sugestões de adaptações no ambiente doméstico para maior segurança e independência." />
+              <ListItemWithIcon icon={Repeat} boldText="Reavaliação Contínua" text="Acompanho sua evolução de perto, ajustando o plano de tratamento conforme necessário para garantir os melhores resultados." />
             </ol>
-            <p className="text-[#555] mt-4">
-              As sessões têm duração aproximada de 50 minutos a 1 hora, respeitando sempre o seu ritmo e disposição.
+            <p className="text-lg text-[#555] leading-relaxed mt-6 bg-terracota-800 bg-opacity-10 p-4 rounded-lg"> {/* Light terracotta background for emphasis */}
+              As sessões têm duração aproximada de <strong>50 minutos a 1 hora</strong>, respeitando sempre o seu ritmo e disposição.
             </p>
           </div>
 
-          {/* NEW SECTION: Sinais de Alerta */}
-          <div className="bg-[#F1F5F9] rounded-2xl p-6 mb-10 shadow-md">
-            <h2 className="text-2xl font-semibold mb-4 text-[#3A3A3A]">
-              Sinais de Alerta: Quando Procurar Fisioterapia para Idosos?
+          {/* SECTION: Sinais de Alerta */}
+          <div className="bg-[#F1F5F9] rounded-2xl p-6 md:p-8 mb-12 shadow-lg"> {/* Increased padding and shadow */}
+            <h2 className="text-3xl font-semibold mb-6 text-[#3A3A3A] flex items-center">
+              <AlertTriangle className="h-8 w-8 mr-3 text-red-500" /> Sinais de Alerta: Quando Procurar Fisioterapia?
             </h2>
-            <p className="text-[#555] mb-4">
+            <p className="text-lg text-[#555] leading-relaxed mb-4">
               Fique atento a alguns sinais que podem indicar a necessidade de acompanhamento fisioterapêutico para você ou seu familiar idoso:
             </p>
-            <ul className="list-disc pl-6 space-y-2 text-[#555]">
-              <li>Dificuldade crescente para levantar da cama ou de cadeiras.</li>
-              <li>Perda de equilíbrio frequente ou sensação de tontura ao caminhar.</li>
-              <li>Medo de cair, levando à redução de atividades e isolamento.</li>
-              <li>Dores persistentes nas articulações, costas ou músculos.</li>
-              <li>Lentidão excessiva para realizar tarefas simples do dia a dia.</li>
-              <li>Após uma queda, cirurgia, AVC ou período de imobilização.</li>
-              <li>Observação de que o idoso está andando com passos mais curtos ou arrastando os pés.</li>
-              <li>Cansaço fácil ao realizar pequenas caminhadas ou atividades domésticas.</li>
+            <ul className="space-y-3 text-[#555]">
+              <ListItemWithIcon icon={Accessibility} text="Dificuldade crescente para levantar da cama ou de cadeiras." />
+              <ListItemWithIcon icon={Wind} text="Perda de equilíbrio frequente ou sensação de tontura ao caminhar." />
+              <ListItemWithIcon icon={AlertTriangle} text="Medo de cair, levando à redução de atividades e isolamento." />
+              <ListItemWithIcon icon={Stethoscope} text="Dores persistentes nas articulações, costas ou músculos." />
+              <ListItemWithIcon icon={Clock} text="Lentidão excessiva para realizar tarefas simples do dia a dia." />
+              <ListItemWithIcon icon={FileWarning} text="Após uma queda, cirurgia, AVC ou período de imobilização." />
+              <ListItemWithIcon icon={Footprints} text="Observação de que o idoso está andando com passos mais curtos ou arrastando os pés." />
+              <ListItemWithIcon icon={HeartPulse} text="Cansaço fácil ao realizar pequenas caminhadas ou atividades domésticas." />
             </ul>
-            <p className="text-[#555] mt-4">
+            <p className="text-lg text-[#555] leading-relaxed mt-6">
               Identificar esses sinais precocemente e buscar ajuda profissional pode fazer uma grande diferença na manutenção da independência e qualidade de vida.
             </p>
           </div>
 
           {/* "Quem cuida?" section */}
-          <div className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4 text-[#3A3A3A]">
-              Quem cuida?
+          <div className="mb-12 text-center md:text-left"> {/* Centered on mobile */}
+            <h2 className="text-3xl font-semibold mb-6 text-[#3A3A3A]">
+              Quem Cuida?
             </h2>
-            <p className="text-[#555]">
+            <p className="text-lg text-[#555] leading-relaxed">
               Meu nome é Jéssica Godoi, sou fisioterapeuta especializada em saúde e funcionalidade do corpo ao longo das fases da vida. Tenho experiência com idosos e realizo atendimentos domiciliares com acolhimento, escuta e respeito ao tempo e às necessidades de cada pessoa.
             </p>
           </div>
 
           {/* "Atendimento em:" section */}
-          <div className="mb-10">
-            <h2 className="text-2xl font-semibold mb-2 text-[#3A3A3A]">
-              Atendimento em:
+          <div className="mb-12 text-center md:text-left"> {/* Centered on mobile */}
+            <h2 className="text-3xl font-semibold mb-6 text-[#3A3A3A] flex items-center justify-center md:justify-start">
+              <MapPin className="h-8 w-8 mr-3 text-[#E87A5B]" /> Atendimento em:
             </h2>
-            <p className="text-[#555]">Campinas – Cambuí e bairros próximos</p>
+            <p className="text-xl text-[#555] leading-relaxed font-medium"> {/* Increased font size and weight */}
+              Campinas – Cambuí e bairros próximos
+            </p>
           </div>
 
-          {/* Call to Action Button section with updated colors and text */}
+          {/* Call to Action Button section */}
           <div className="text-center mt-10">
             <a
-              href="https://wa.link/32p5y9" // WhatsApp link
-              target="_blank" // Opens link in a new tab
-              rel="noopener noreferrer" // Security best practice for target="_blank"
-              // Updated button styling: terracotta background, white text, and hover effect
-              className="inline-block bg-[#E87A5B] text-white text-lg px-6 py-3 rounded-full shadow-md hover:bg-[#D46A4B] transition" 
+              href="https://wa.link/32p5y9" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-block bg-[#E87A5B] text-white text-xl px-8 py-4 rounded-full shadow-lg hover:bg-[#D46A4B] transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#E87A5B]" 
             >
-              Descubra como a fisioterapia pode ajudar: Fale conosco {/* Updated CTA text */}
+              Descubra como a fisioterapia pode ajudar: Fale conosco
             </a>
           </div>
         </div>
 
         {/* Right column: Profile Image */}
-        <div className="space-y-6">
+        <div className="space-y-6 md:sticky md:top-24"> {/* Made profile image sticky on larger screens */}
           <img
-            src={profileImg} // Source of the image, imported from assets
-            alt="Foto de perfil da Dra. Jéssica Godoi" // Alt text for accessibility
-            className="object-cover w-full h-auto rounded-lg shadow-md" // Styling for the image
+            src={profileImg} 
+            alt="Foto de perfil da Dra. Jéssica Godoi" 
+            className="object-cover w-full h-auto rounded-lg shadow-xl" 
           />
+           <div className="bg-white p-6 rounded-lg shadow-xl border border-gray-200">
+            <h3 className="text-xl font-semibold text-[#9A6A59] mb-3">Dra. Jéssica Godoi</h3>
+            <p className="text-sm text-[#555] mb-1"><strong className="text-[#9A6A59]">Especialidade:</strong> Fisioterapia Gerontológica</p>
+            <p className="text-sm text-[#555] mb-1"><strong className="text-[#9A6A59]">Foco:</strong> Reabilitação e qualidade de vida para idosos.</p>
+            <p className="text-sm text-[#555]"><strong className="text-[#9A6A59]">Abordagem:</strong> Humanizada, individual e no conforto do lar.</p>
+          </div>
         </div>
       </div>
     </div>
