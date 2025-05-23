@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import profileImg from './assets/profile.webp'; // <<< Caminho e nome da imagem atualizados
 
 export default function FisioDomiciliarIdosos() {
   useEffect(() => {
@@ -11,16 +12,17 @@ export default function FisioDomiciliarIdosos() {
 
   return (
     <div>
-    {/* Hero Section */}
-    <section className="relative pt-32 pb-16 bg-terracota-800 text-white">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6">Fisioterapia Domiciliar para Idosos</h1>
-          <p className="text-lg text-white leading-relaxed font-medium">
-          Mais segurança e qualidade de vida para quem você ama, sem sair de casa.          </p>
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-16 bg-terracota-800 text-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6">Fisioterapia Domiciliar para Idosos</h1>
+            <p className="text-lg text-white leading-relaxed font-medium">
+              Mais segurança e qualidade de vida para quem você ama, sem sair de casa.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
         {/* Conteúdo principal */}
@@ -36,11 +38,8 @@ export default function FisioDomiciliarIdosos() {
             <ul className="list-disc pl-6 space-y-2 text-[#3A3A3A]">
               <li>Idosos com dificuldade para andar, levantar ou manter o equilíbrio</li>
               <li>Histórico de quedas ou medo de cair</li>
-              <li>Recuperação pós-cirurgia ou internação</li>
-              <li>Doenças como Parkinson, Alzheimer ou AVC</li>
               <li>Dores ou limitações nas atividades do dia a dia</li>
               <li>Necessidade de fortalecimento muscular e coordenação</li>
-              <li>Isolamento social ou necessidade de atenção contínua</li>
             </ul>
           </div>
 
@@ -71,7 +70,7 @@ export default function FisioDomiciliarIdosos() {
 
           <div className="text-center mt-10">
             <a
-              href="https://wa.me/55SEUNUMERO?text=Olá%2C+gostaria+de+agendar+uma+avaliação+de+fisioterapia+domiciliar+para+idosos"
+              href="https://wa.link/32p5y9" // <<< Link do WhatsApp atualizado
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-[#3A3A3A] text-white text-lg px-6 py-3 rounded-full shadow-md hover:bg-[#2A2A2A] transition"
@@ -83,11 +82,10 @@ export default function FisioDomiciliarIdosos() {
 
         {/* Lateral direita com imagens */}
         <div className="space-y-6">
-        <img 
-                src={profileImg} 
-                alt="Foto de perfil da Dra. Jéssica Godoi" 
-                className="object-cover w-full h-full rounded-lg"
-
+          <img
+            src={profileImg}
+            alt="Foto de perfil da Dra. Jéssica Godoi"
+            className="object-cover w-full h-auto rounded-lg shadow-md"
           />
         </div>
       </div>
