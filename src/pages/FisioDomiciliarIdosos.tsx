@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import profileImg from './assets/profile.webp'; // <<< Caminho e nome da imagem atualizados
+import profileImg from '../assets/profile.webp'; 
 
 export default function FisioDomiciliarIdosos() {
   useEffect(() => {
