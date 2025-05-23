@@ -52,8 +52,11 @@ export default function FisioDomiciliarIdosos() {
             <ul className="list-disc pl-6 space-y-2 text-[#9A6A59]"> {/* Darker terracotta text for list items */}
               <li>Idosos com dificuldade para andar, levantar ou manter o equilíbrio</li>
               <li>Histórico de quedas ou medo de cair</li>
+              <li>Recuperação pós-cirurgia ou internação</li>
+              <li>Doenças como Parkinson, Alzheimer ou AVC</li>
               <li>Dores ou limitações nas atividades do dia a dia</li>
               <li>Necessidade de fortalecimento muscular e coordenação</li>
+              <li>Isolamento social ou necessidade de atenção contínua</li>
             </ul>
           </div>
 
@@ -64,6 +67,86 @@ export default function FisioDomiciliarIdosos() {
             </h2>
             <p className="text-[#555] mb-4">
               Com o envelhecimento, é comum haver perda de força, equilíbrio e agilidade. A fisioterapia domiciliar ajuda a prevenir quedas, melhorar a mobilidade e manter o idoso mais independente e ativo dentro da sua própria casa — com toda a atenção que ele merece.
+            </p>
+          </div>
+
+          {/* NEW SECTION: Benefícios Detalhados */}
+          <div className="mb-10">
+            <h2 className="text-2xl font-semibold mb-4 text-[#3A3A3A]">
+              Benefícios Detalhados da Fisioterapia Domiciliar
+            </h2>
+            <ul className="list-disc pl-6 space-y-3 text-[#555]">
+              <li>
+                <strong>Conforto e Segurança do Lar:</strong> Tratamento no ambiente familiar, reduzindo o estresse e os riscos de deslocamento.
+              </li>
+              <li>
+                <strong>Atendimento Personalizado:</strong> Foco total nas necessidades individuais do paciente, com um plano de tratamento exclusivo.
+              </li>
+              <li>
+                <strong>Prevenção de Quedas:</strong> Exercícios específicos para fortalecimento e equilíbrio, adaptados ao ambiente doméstico.
+              </li>
+              <li>
+                <strong>Recuperação Acelerada:</strong> Ideal para pós-operatórios ou após longos períodos de internação, promovendo uma reabilitação mais rápida.
+              </li>
+              <li>
+                <strong>Maior Adesão ao Tratamento:</strong> A comodidade do atendimento em casa facilita a continuidade e o engajamento do paciente.
+              </li>
+              <li>
+                <strong>Envolvimento Familiar:</strong> Permite que familiares acompanhem de perto e participem ativamente do processo de recuperação.
+              </li>
+            </ul>
+          </div>
+
+          {/* NEW SECTION: Como Funciona uma Sessão Típica? */}
+          <div className="mb-10">
+            <h2 className="text-2xl font-semibold mb-4 text-[#3A3A3A]">
+              Como Funciona uma Sessão Típica?
+            </h2>
+            <p className="text-[#555] mb-2">
+              Cada sessão é cuidadosamente planejada para atender às suas necessidades específicas, mas geralmente seguimos alguns passos:
+            </p>
+            <ol className="list-decimal pl-6 space-y-3 text-[#555]">
+              <li>
+                <strong>Avaliação Inicial Completa:</strong> Na primeira consulta, realizo uma anamnese detalhada, avalio sua mobilidade, força, equilíbrio e identifico suas principais queixas e objetivos.
+              </li>
+              <li>
+                <strong>Plano de Tratamento Individualizado:</strong> Com base na avaliação, elaboramos juntos um plano de tratamento com metas realistas e focadas na sua melhora funcional.
+              </li>
+              <li>
+                <strong>Exercícios Terapêuticos:</strong> Realizamos exercícios de fortalecimento, alongamento, equilíbrio, coordenação e treino de marcha, utilizando técnicas e recursos adequados.
+              </li>
+              <li>
+                <strong>Orientações e Adaptações:</strong> Forneço orientações para o dia a dia e sugestões de adaptações no ambiente doméstico para maior segurança e independência.
+              </li>
+              <li>
+                <strong>Reavaliação Contínua:</strong> Acompanho sua evolução de perto, ajustando o plano de tratamento conforme necessário para garantir os melhores resultados.
+              </li>
+            </ol>
+            <p className="text-[#555] mt-4">
+              As sessões têm duração aproximada de 50 minutos a 1 hora, respeitando sempre o seu ritmo e disposição.
+            </p>
+          </div>
+
+          {/* NEW SECTION: Sinais de Alerta */}
+          <div className="bg-[#F1F5F9] rounded-2xl p-6 mb-10 shadow-md">
+            <h2 className="text-2xl font-semibold mb-4 text-[#3A3A3A]">
+              Sinais de Alerta: Quando Procurar Fisioterapia para Idosos?
+            </h2>
+            <p className="text-[#555] mb-4">
+              Fique atento a alguns sinais que podem indicar a necessidade de acompanhamento fisioterapêutico para você ou seu familiar idoso:
+            </p>
+            <ul className="list-disc pl-6 space-y-2 text-[#555]">
+              <li>Dificuldade crescente para levantar da cama ou de cadeiras.</li>
+              <li>Perda de equilíbrio frequente ou sensação de tontura ao caminhar.</li>
+              <li>Medo de cair, levando à redução de atividades e isolamento.</li>
+              <li>Dores persistentes nas articulações, costas ou músculos.</li>
+              <li>Lentidão excessiva para realizar tarefas simples do dia a dia.</li>
+              <li>Após uma queda, cirurgia, AVC ou período de imobilização.</li>
+              <li>Observação de que o idoso está andando com passos mais curtos ou arrastando os pés.</li>
+              <li>Cansaço fácil ao realizar pequenas caminhadas ou atividades domésticas.</li>
+            </ul>
+            <p className="text-[#555] mt-4">
+              Identificar esses sinais precocemente e buscar ajuda profissional pode fazer uma grande diferença na manutenção da independência e qualidade de vida.
             </p>
           </div>
 
