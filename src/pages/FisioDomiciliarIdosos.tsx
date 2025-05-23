@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
 // Ensure this path is correct based on your project structure.
-// If FisioDomiciliarIdosos.tsx is in 'src/pages/' and profile.webp is in 'src/assets/',
-// then '../assets/profile.webp' is correct.
 import profileImg from '../assets/profile.webp';
-import { Home, UserCheck, ShieldCheck, TrendingUp, ThumbsUp, Users, ClipboardList, Target, Bike, Lightbulb, Repeat, AlertTriangle, Accessibility, Activity, Stethoscope, Clock, FileWarning, Footprints, Wind, HeartPulse, SmilePlus, MapPin } from 'lucide-react';
+import confortoLarImg from '../assets/fisioterapia-idoso-1.webp'; // Nova importação para a imagem de conforto do lar
+import { Home, UserCheck, ShieldCheck, TrendingUp, ThumbsUp, Users, ClipboardList, Target, Bike, Lightbulb, Repeat, AlertTriangle, Accessibility, Activity, Stethoscope, Clock, FileWarning, Footprints, Wind, HeartPulse, MapPin } from 'lucide-react';
 
 export default function FisioDomiciliarIdosos() {
   // This useEffect hook attempts to hide a floating button with id 'botao-avaliacao-flutuante'
@@ -53,16 +52,13 @@ export default function FisioDomiciliarIdosos() {
           {/* "Para quem é indicado?" section */}
           <div className="bg-[#FAE5DE] rounded-2xl p-6 md:p-8 mb-12 shadow-lg"> {/* Increased padding and shadow */}
             <h2 className="text-3xl font-semibold mb-6 text-[#9A6A59] flex items-center">
-              <SmilePlus className="h-8 w-8 mr-3 text-[#E87A5B]" /> Para quem é indicado?
+              Para quem é indicado?
             </h2>
             <ul className="space-y-3 text-[#9A6A59]">
               <ListItemWithIcon icon={Accessibility} text="Idosos com dificuldade para andar, levantar ou manter o equilíbrio" />
               <ListItemWithIcon icon={AlertTriangle} text="Histórico de quedas ou medo de cair" />
-              <ListItemWithIcon icon={HeartPulse} text="Recuperação pós-cirurgia ou internação" />
-              <ListItemWithIcon icon={Activity} text="Doenças como Parkinson, Alzheimer ou AVC" />
               <ListItemWithIcon icon={Stethoscope} text="Dores ou limitações nas atividades do dia a dia" />
               <ListItemWithIcon icon={Bike} text="Necessidade de fortalecimento muscular e coordenação" />
-              <ListItemWithIcon icon={Users} text="Isolamento social ou necessidade de atenção contínua" />
             </ul>
           </div>
 
@@ -94,8 +90,8 @@ export default function FisioDomiciliarIdosos() {
               </div>
               <div className="md:w-1/3 mt-6 md:mt-0">
                 <img 
-                  src="https://placehold.co/300x400/FAE5DE/9A6A59?text=Conforto+do+Lar" 
-                  alt="Imagem ilustrativa do conforto do lar para fisioterapia" 
+                  src={confortoLarImg} // Imagem atualizada aqui
+                  alt="Fisioterapeuta atendendo idoso em casa, demonstrando conforto e segurança" // Alt text atualizado
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                   onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/300x400/EEEEEE/777777?text=Imagem+Indisponível"; }}
                 />
@@ -153,7 +149,7 @@ export default function FisioDomiciliarIdosos() {
               Quem Cuida?
             </h2>
             <p className="text-lg text-[#555] leading-relaxed">
-              Meu nome é Jéssica Godoi, sou fisioterapeuta especializada em saúde e funcionalidade do corpo ao longo das fases da vida. Tenho experiência com idosos e realizo atendimentos domiciliares com acolhimento, escuta e respeito ao tempo e às necessidades de cada pessoa.
+              Meu nome é Jéssica Godoi, sou fisioterapeuta especializada em saúde em saúde da mulher ao longo das fases da vida. Tenho experiência com idosos e realizo atendimentos domiciliares com acolhimento, escuta e respeito ao tempo e às necessidades de cada pessoa.
             </p>
           </div>
 
@@ -163,7 +159,7 @@ export default function FisioDomiciliarIdosos() {
               <MapPin className="h-8 w-8 mr-3 text-[#E87A5B]" /> Atendimento em:
             </h2>
             <p className="text-xl text-[#555] leading-relaxed font-medium"> {/* Increased font size and weight */}
-              Campinas – Cambuí e bairros próximos
+              Campinas – Cambuí e Sousas
             </p>
           </div>
 
@@ -175,7 +171,7 @@ export default function FisioDomiciliarIdosos() {
               rel="noopener noreferrer" 
               className="inline-block bg-[#E87A5B] text-white text-xl px-8 py-4 rounded-full shadow-lg hover:bg-[#D46A4B] transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#E87A5B]" 
             >
-              Descubra como a fisioterapia pode ajudar: Fale conosco
+              Descubra como a fisioterapia pode ajudar: Fale comigo
             </a>
           </div>
         </div>
@@ -189,7 +185,7 @@ export default function FisioDomiciliarIdosos() {
           />
            <div className="bg-white p-6 rounded-lg shadow-xl border border-gray-200">
             <h3 className="text-xl font-semibold text-[#9A6A59] mb-3">Dra. Jéssica Godoi</h3>
-            <p className="text-sm text-[#555] mb-1"><strong className="text-[#9A6A59]">Especialidade:</strong> Fisioterapia Gerontológica</p>
+            <p className="text-sm text-[#555] mb-1"><strong className="text-[#9A6A59]">Especialidade:</strong> Saúde da Mulher (Unicamp)</p>
             <p className="text-sm text-[#555] mb-1"><strong className="text-[#9A6A59]">Foco:</strong> Reabilitação e qualidade de vida para idosos.</p>
             <p className="text-sm text-[#555]"><strong className="text-[#9A6A59]">Abordagem:</strong> Humanizada, individual e no conforto do lar.</p>
           </div>
