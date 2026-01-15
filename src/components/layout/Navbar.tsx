@@ -26,14 +26,14 @@ const Navbar: React.FC = () => {
     { name: 'Quem sou', path: '/about' },
     { name: 'Serviços', path: '/services' },
     { name: 'Blog', path: '/blog' },
+    { name: 'Fisio. Idosos', path: '/fisioterapia-idoso' },
     { name: 'Contato', path: '/contact' },
   ];
 
   return (
-    <header 
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'
-      }`}
+    <header
+      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'
+        }`}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
@@ -54,11 +54,10 @@ const Navbar: React.FC = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`font-medium transition-colors duration-200 ${
-                    location.pathname === link.path
+                  className={`font-medium transition-colors duration-200 ${location.pathname === link.path
                       ? isScrolled ? 'text-terracota-600' : 'text-terracota-100'
                       : isScrolled ? 'text-gray-800 hover:text-terracota-600' : 'text-white hover:text-terracota-100'
-                  }`}
+                    }`}
                 >
                   {link.name}
                 </Link>
@@ -69,14 +68,13 @@ const Navbar: React.FC = () => {
           {/* Botão Agende Agora */}
           <div className="hidden md:block w-1/4 text-right">
             <a
-              href="https://wa.link/32p5y9" 
+              href="https://wa.link/32p5y9"
               target="_blank"
               rel="noopener noreferrer"
-              className={`font-medium px-4 py-2 rounded-full transition-colors duration-200 ${
-                isScrolled 
-                  ? 'bg-terracota-600 text-white hover:bg-terracota-700' 
+              className={`font-medium px-4 py-2 rounded-full transition-colors duration-200 ${isScrolled
+                  ? 'bg-terracota-600 text-white hover:bg-terracota-700'
                   : 'bg-white text-terracota-800 hover:bg-gray-100'
-              }`}
+                }`}
             >
               Agende agora
             </a>
@@ -104,18 +102,17 @@ const Navbar: React.FC = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`font-medium py-2 ${
-                    location.pathname === link.path
+                  className={`font-medium py-2 ${location.pathname === link.path
                       ? 'text-terracota-600'
                       : 'text-gray-800 hover:text-terracota-600'
-                  }`}
+                    }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.name}
                 </Link>
               ))}
               <a
-                href="https://wa.link/32p5y9" 
+                href="https://wa.link/32p5y9"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium bg-terracota-600 text-white py-3 rounded-full text-center hover:bg-terracota-700 transition-colors duration-200"

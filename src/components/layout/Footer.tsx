@@ -69,6 +69,9 @@ const Footer: React.FC = () => {
                 <Link to="/services/disfuncao-sexual" className="text-terracota-100 hover:text-white transition-colors">Disfunções Sexuais Femininas</Link>
               </li>
               <li>
+                <Link to="/fisioterapia-idoso" className="text-terracota-100 hover:text-white transition-colors">Fisioterapia para Idosos</Link>
+              </li>
+              <li>
                 <Link to="/services/atendimento-domiciliar" className="text-terracota-100 hover:text-white transition-colors">Atendimento Domiciliar</Link>
               </li>
             </ul>
