@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
     { name: 'Quem sou', path: '/about' },
     { name: 'Serviços', path: '/services' },
     { name: 'Blog', path: '/blog' },
-    { name: 'Fisio. Idosos', path: '/fisioterapia-idoso' },
+    { name: 'Fisio Idosos', path: '/fisioterapia-idoso' },
     { name: 'Contato', path: '/contact' },
   ];
 
@@ -55,8 +55,8 @@ const Navbar: React.FC = () => {
                   key={link.path}
                   to={link.path}
                   className={`font-medium transition-colors duration-200 ${location.pathname === link.path
-                      ? isScrolled ? 'text-terracota-600' : 'text-terracota-100'
-                      : isScrolled ? 'text-gray-800 hover:text-terracota-600' : 'text-white hover:text-terracota-100'
+                    ? isScrolled ? 'text-terracota-600' : 'text-terracota-100'
+                    : isScrolled ? 'text-gray-800 hover:text-terracota-600' : 'text-white hover:text-terracota-100'
                     }`}
                 >
                   {link.name}
@@ -72,8 +72,8 @@ const Navbar: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               className={`font-medium px-4 py-2 rounded-full transition-colors duration-200 ${isScrolled
-                  ? 'bg-terracota-600 text-white hover:bg-terracota-700'
-                  : 'bg-white text-terracota-800 hover:bg-gray-100'
+                ? 'bg-terracota-600 text-white hover:bg-terracota-700'
+                : 'bg-white text-terracota-800 hover:bg-gray-100'
                 }`}
             >
               Agende agora
@@ -103,8 +103,8 @@ const Navbar: React.FC = () => {
                   key={link.path}
                   to={link.path}
                   className={`font-medium py-2 ${location.pathname === link.path
-                      ? 'text-terracota-600'
-                      : 'text-gray-800 hover:text-terracota-600'
+                    ? 'text-terracota-600'
+                    : 'text-gray-800 hover:text-terracota-600'
                     }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
