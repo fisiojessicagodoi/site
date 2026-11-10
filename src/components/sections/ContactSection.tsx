@@ -2,8 +2,15 @@ import React from 'react';
 import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
 import SectionTitle from '../ui/SectionTitle';
 import Button from '../ui/Button';
+import posthog, { isPostHogConfigured } from '../../posthog';
 
 const ContactSection: React.FC = () => {
+  const captureWhatsAppContact = () => {
+    if (isPostHogConfigured) {
+      posthog.capture('whatsapp_contact_initiated', { placement: 'contact_section' });
+    }
+  };
+
   return (
     <section className="py-16 md:py-24">
       <div className="container mx-auto px-4 md:px-6">
@@ -72,6 +79,7 @@ const ContactSection: React.FC = () => {
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-block"
+                    onClick={captureWhatsAppContact}
                   >
                     <Button 
                       variant="primary" 

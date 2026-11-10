@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import posthog, { isPostHogConfigured } from '../../posthog';
 
 interface ServiceCardProps {
   id: string;
@@ -17,6 +18,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   image,
   icon,
 }) => {
+  const captureServiceDetailsOpened = () => {
+    if (isPostHogConfigured) {
+      posthog.capture('service_details_opened', { placement: 'service_card' });
+    }
+  };
+
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
       <img src={image} alt={title} className="w-full h-48 object-cover" />
@@ -29,6 +36,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         <Link 
           to={`/services/${id}`} 
           className="inline-flex items-center text-terracota-600 hover:text-terracota-800 font-medium"
+          onClick={captureServiceDetailsOpened}
         >
           Saiba mais <ArrowRight size={16} className="ml-1" />
         </Link>

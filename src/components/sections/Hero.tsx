@@ -4,8 +4,15 @@ import profileImageWebp from '../../assets/profile.webp';
 import profileImageJpg from '../../assets/profile.jpg';
 import OptimizedImage from '../ui/OptimizedImage';
 import PreloadResources from '../ui/PreloadResources';
+import posthog, { isPostHogConfigured } from '../../posthog';
 
 const Hero = () => {
+  const captureAppointmentCta = () => {
+    if (isPostHogConfigured) {
+      posthog.capture('appointment_cta_clicked', { placement: 'hero' });
+    }
+  };
+
   return (
     <>
       <PreloadResources />
@@ -40,6 +47,7 @@ const Hero = () => {
                 to="/contact" 
                 className="inline-block p-2"
                 aria-label="Ir para página de contato"
+                onClick={captureAppointmentCta}
               >
                 <button 
                   className="inline-flex items-center justify-center font-medium rounded-full transition-all
