@@ -9,9 +9,16 @@ import dorPelvicaImg from '../assets/dor-pelvica.png';
 import disfuncaoServicoImg from '../assets/disfunçao-servico.png';
 import prolapsoImg from '../assets/prolapso-servico.png';
 import domicilioImg from '../assets/domicilio-servico.png';
+import posthog, { isPostHogConfigured } from '../posthog';
 
 const ServiceDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
+
+  const capture = (event: 'appointment_cta_clicked' | 'whatsapp_contact_initiated') => {
+    if (isPostHogConfigured) {
+      posthog.capture(event, { placement: 'service_detail' });
+    }
+  };
   
   // Dados do serviço
   const services = {
@@ -343,7 +350,7 @@ const ServiceDetail: React.FC = () => {
               Dê o primeiro passo em direção a uma melhor saúde pélvica. Agende uma consulta para discutir suas necessidades e desenvolver um plano de tratamento personalizado.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link to="/contact">
+              <Link to="/contact" onClick={() => capture('appointment_cta_clicked')}>
                 <Button variant="primary" size="lg">
                   Agendar Consulta
                 </Button>
@@ -352,6 +359,7 @@ const ServiceDetail: React.FC = () => {
                 href="https://wa.link/32p5y9" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                onClick={() => capture('whatsapp_contact_initiated')}
               >
                 <Button variant="outline" size="lg">
                   Contato via WhatsApp

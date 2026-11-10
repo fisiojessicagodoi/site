@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import Logo from '../ui/Logo';
+import posthog, { isPostHogConfigured } from '../../posthog';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,6 +20,12 @@ const Navbar: React.FC = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const captureWhatsAppContact = (placement: 'navbar_desktop' | 'navbar_mobile') => {
+    if (isPostHogConfigured) {
+      posthog.capture('whatsapp_contact_initiated', { placement });
+    }
   };
 
   const navLinks = [
@@ -75,6 +82,7 @@ const Navbar: React.FC = () => {
                 ? 'bg-terracota-600 text-white hover:bg-terracota-700'
                 : 'bg-white text-terracota-800 hover:bg-gray-100'
                 }`}
+              onClick={() => captureWhatsAppContact('navbar_desktop')}
             >
               Agende agora
             </a>
@@ -116,7 +124,10 @@ const Navbar: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium bg-terracota-600 text-white py-3 rounded-full text-center hover:bg-terracota-700 transition-colors duration-200"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  captureWhatsAppContact('navbar_mobile');
+                }}
               >
                 Agende agora
               </a>
