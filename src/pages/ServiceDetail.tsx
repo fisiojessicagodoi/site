@@ -19,6 +19,12 @@ const ServiceDetail: React.FC = () => {
       posthog.capture(event, { placement: 'service_detail' });
     }
   };
+
+  const captureNewsletterSubscriptionRequested = () => {
+    if (isPostHogConfigured) {
+      posthog.capture('newsletter_subscription_requested', { placement: 'service_detail' });
+    }
+  };
   
   // Dados do serviço
   const services = {
@@ -325,7 +331,7 @@ const ServiceDetail: React.FC = () => {
                 Semanalmente, envio dicas práticas de autocuidado, informações sobre saúde feminina e novidades sobre tratamentos. 
                 Tudo para ajudar você a cuidar melhor da sua saúde pélvica, com conteúdo selecionado especialmente para mulheres.
               </p>
-              <form className="max-w-md mx-auto">
+              <form className="max-w-md mx-auto" onSubmit={captureNewsletterSubscriptionRequested}>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <input
                     type="email"
