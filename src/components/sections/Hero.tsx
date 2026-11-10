@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import profileImageWebp from '../../assets/profile.webp';
 import profileImageJpg from '../../assets/profile.jpg';
 import OptimizedImage from '../ui/OptimizedImage';
@@ -38,27 +37,27 @@ const Hero = () => {
               Fisioterapia Pélvica em Campinas
             </h1>
 
-            <p className="text-lg mb-8 max-w-2xl mx-auto text-white/90 drop-shadow-md">
+            <p className="text-lg mb-4 max-w-2xl mx-auto text-white/90 drop-shadow-md">
               Atendimento particular, personalizado e baseado em evidências. Sinta-se à vontade para cuidar de você.
             </p>
-            
+
+            <p className="text-sm mb-8 max-w-2xl mx-auto text-white/80 drop-shadow-md">
+              Fisioterapeuta pélvica formada pela UFSCar e Unicamp · Atendimento em Campinas e domiciliar
+            </p>
+
             <div className="mt-8 mb-12">
-              <Link 
-                to="/contact" 
-                className="inline-block p-2"
-                aria-label="Ir para página de contato"
+              <a
+                href="https://wa.link/32p5y9"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={captureAppointmentCta}
+                className="inline-flex items-center justify-center font-medium rounded-full transition-all
+                         px-10 py-5 text-lg text-terracota-900 bg-white hover:bg-white/90
+                         shadow-lg hover:shadow-xl transform hover:-translate-y-0.5
+                         min-h-[56px] min-w-[200px]"
               >
-                <button 
-                  className="inline-flex items-center justify-center font-medium rounded-full transition-all
-                           px-10 py-5 text-lg text-terracota-900 bg-white hover:bg-white/90 
-                           shadow-lg hover:shadow-xl transform hover:-translate-y-0.5
-                           min-h-[56px] min-w-[200px]"
-                  aria-label="Agendar consulta"
-                >
-                  Agendar consulta
-                </button>
-              </Link>
+                Agendar avaliação pelo WhatsApp
+              </a>
             </div>
           </div>
 
