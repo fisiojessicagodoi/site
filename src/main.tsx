@@ -3,7 +3,8 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './index.css';
-import { posthogLogger } from './posthog';
+import { isPostHogConfigured, posthogLogger } from './posthog';
+import { initAnalytics } from './analytics';
 
 const root = document.getElementById('root');
 
@@ -12,6 +13,10 @@ if (!root) {
 }
 
 posthogLogger?.info('client_render_started', { entry_point: 'main' });
+
+if (isPostHogConfigured) {
+  initAnalytics();
+}
 
 createRoot(root).render(
   <React.StrictMode>
