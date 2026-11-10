@@ -1,16 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Páginas principais -->
+  <url><loc>https://fisiojessicagodoi.com.br/</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/about</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/services</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/contact</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/fisioterapia-idoso</loc></url>
 
+  <!-- Serviços (src/pages/ServiceDetail.tsx) -->
+  <url><loc>https://fisiojessicagodoi.com.br/services/dor-pelvica</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/services/incontinencia</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/services/prolapso-pelvico</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/services/disfuncao-sexual</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/services/consultas-virtuais</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/services/atendimento-domiciliar</loc></url>
 
-<url>
-  <loc>https://fisiojessicagodoi.com.br/</loc>
-  <lastmod>2025-05-19T15:58:58+00:00</lastmod>
-</url>
-
-
+  <!-- Artigos (src/pages/ArticleDetail.tsx) -->
+  <url><loc>https://fisiojessicagodoi.com.br/blog/treinamento-assoalho-pelvico</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/prolapso-pelvico-artigo</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/exercicios-assoalho-pelvico</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/prolapso-pelvico-artigo-2</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/sindrome-rokitansky</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/incontinencia-urinaria-urgencia</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/incontinencia-urinaria-esforco</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/incontinencia-urinaria-mista</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/diferenca-incontinencias</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/urgencia-miccional</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/hesitacao-miccional</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/esvaziamento-incompleto</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/gotejamento-pos-miccional</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/diario-miccional</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/tempo-sem-urinar</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/habitos-ruins-bexiga</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/constipacao-intestinal</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/criterios-roma</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/escala-bristol</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/homenagem-dia-das-maes</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/dor-pelvica-cronica</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/atendimento-domiciliar-campinas</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/fisioterapia-pelvica-campinas</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/dispareunia-profundidade-superficie</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/dificuldade-orgasmo</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/desejo-sexual-baixo</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/aderencia-clitoris</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/clitoris-prazer-feminino</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/vulvodinia</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/dispareunia-vaginismo</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/fatores-disfuncao-sexual</loc></url>
+  <url><loc>https://fisiojessicagodoi.com.br/blog/prolapso-pelvico</loc></url>
 </urlset>
