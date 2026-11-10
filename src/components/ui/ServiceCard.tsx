@@ -20,7 +20,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 }) => {
   const captureServiceDetailsOpened = () => {
     if (isPostHogConfigured) {
-      posthog.capture('service_details_opened', { placement: 'service_card' });
+      posthog.capture('service_details_opened', { placement: 'service_card', service_id: id });
     }
   };
 

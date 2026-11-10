@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, User } from 'lucide-react';
+import posthog, { isPostHogConfigured } from '../../posthog';
 
 interface BlogCardProps {
   id: string;
@@ -23,8 +24,14 @@ const BlogCard: React.FC<BlogCardProps> = ({
   image,
   category
 }) => {
+  const captureBlogArticleOpened = () => {
+    if (isPostHogConfigured) {
+      posthog.capture('blog_article_opened', { placement: 'blog_card' });
+    }
+  };
+
   return (
-    <Link to={`/blog/${id}`} className="group">
+    <Link to={`/blog/${id}`} className="group" onClick={captureBlogArticleOpened}>
       <article className="bg-white rounded-lg shadow-sm overflow-hidden transition-transform group-hover:shadow-md h-full flex flex-col">
         <div className="p-6 flex-grow flex flex-col">
           <div className="flex items-center text-sm text-gray-500 mb-3">
