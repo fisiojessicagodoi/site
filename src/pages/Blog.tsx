@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { SearchIcon, Filter } from 'lucide-react';
 import SectionTitle from '../components/ui/SectionTitle';
 import BlogCard from '../components/ui/BlogCard';
+import posthog, { isPostHogConfigured } from '../posthog';
 
 // Categorias principais organizadas
 const mainCategories = [
@@ -282,6 +283,12 @@ const Blog: React.FC = () => {
   const filteredArticles = searchArticles(articles, searchTerm)
     .filter(article => selectedCategory === '' || article.category === selectedCategory);
 
+  const captureNewsletterSubscriptionRequested = () => {
+    if (isPostHogConfigured) {
+      posthog.capture('newsletter_subscription_requested', { placement: 'blog_page' });
+    }
+  };
+
   return (
     <div>
       {/* Hero Section */}
@@ -392,7 +399,7 @@ const Blog: React.FC = () => {
                 Semanalmente, envio dicas práticas de autocuidado, informações sobre saúde feminina e novidades sobre tratamentos. 
                 Tudo para ajudar você a cuidar melhor da sua saúde pélvica, com conteúdo selecionado especialmente para mulheres.
               </p>
-              <form className="max-w-md mx-auto">
+              <form className="max-w-md mx-auto" onSubmit={captureNewsletterSubscriptionRequested}>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <input
                     type="email"

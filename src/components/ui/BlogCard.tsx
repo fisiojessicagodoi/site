@@ -24,14 +24,14 @@ const BlogCard: React.FC<BlogCardProps> = ({
   image,
   category
 }) => {
-  const captureBlogArticleOpened = () => {
+  const captureArticleOpened = () => {
     if (isPostHogConfigured) {
       posthog.capture('blog_article_opened', { placement: 'blog_card' });
     }
   };
 
   return (
-    <Link to={`/blog/${id}`} className="group" onClick={captureBlogArticleOpened}>
+    <Link to={`/blog/${id}`} className="group" onClick={captureArticleOpened}>
       <article className="bg-white rounded-lg shadow-sm overflow-hidden transition-transform group-hover:shadow-md h-full flex flex-col">
         <div className="p-6 flex-grow flex flex-col">
           <div className="flex items-center text-sm text-gray-500 mb-3">

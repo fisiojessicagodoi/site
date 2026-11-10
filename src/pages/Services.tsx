@@ -8,6 +8,7 @@ import dorPelvicaImg from '../assets/dor-pelvica.png';
 import disfuncaoServicoImg from '../assets/disfunçao-servico.png';
 import prolapsoImg from '../assets/prolapso-servico.png';
 import domicilioImg from '../assets/domicilio-servico.png';
+import posthog, { isPostHogConfigured } from '../posthog';
 
 // SVG minimalista de útero
 const UteroIcon = () => (
@@ -19,6 +20,12 @@ const UteroIcon = () => (
 );
 
 const Services: React.FC = () => {
+  const captureServiceDetailsOpened = () => {
+    if (isPostHogConfigured) {
+      posthog.capture('service_details_opened', { placement: 'services_page' });
+    }
+  };
+
   const services = [
     {
       id: 'dor-pelvica',
@@ -93,6 +100,7 @@ const Services: React.FC = () => {
                   <Link 
                     to={`/services/${service.id}`} 
                     className="inline-flex items-center text-terracota-600 hover:text-terracota-800 font-medium"
+                    onClick={captureServiceDetailsOpened}
                   >
                     Saiba mais <ArrowRight size={16} className="ml-1" />
                   </Link>
