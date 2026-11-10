@@ -17,6 +17,8 @@ if (!posthogKey || !posthogHost) {
   posthog.init(posthogKey, {
     api_host: posthogHost,
     defaults: '2026-08-30',
+    capture_dead_clicks: true,
+    capture_heatmaps: true,
     logs: {
       serviceName: 'pelvic-physiotherapy-site-web',
       environment: import.meta.env.MODE,
